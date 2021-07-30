@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<%- include('components/menu/header__nav/header__nav'); -%>
+<%- include('components/header/header'); -%>
+
+<div class="wrapper">
+  <div class="main-menu__wrapper">
+    <%- include('components/menu/side-menu/side-menu'); -%>
+  </div>
+  <div class="wrapper-content">
+    <%- include('components/location-menu/location-menu'); -%>
+    <div class="content">
+      <%- include('components/card/main-card/main-card'); -%>
+      <div class="card-items">
+        <%- include('components/card/mini-card/mini-card'); -%>
+      </div>
+      <span class="show-all-card_btn">Показать еще</span>
+    </div>
+  </div>
+</div>
+
+<%- include('components/footer/footer'); -%>
+<%- include('components/menu/footer-nav/footer-nav'); -%>
+  <script src="main.js"></script>
+</body>
+</html>

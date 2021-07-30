@@ -1,0 +1,122 @@
+.mini-card__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
+  border-radius: 10px;
+  max-width: 370px;
+  max-height: 526px;
+}
+.mini-card__item:hover {
+  box-shadow: 0 2px 10px rgba(93, 125, 142, 0.5);
+}
+
+.mini-card__content-container {
+  padding: 12px 25px 28px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// bread crumbs
+.mini-card__item .content-category__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-card__item .content-category__item-link {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #777C86;
+  position: relative;
+  padding-right: 24px;
+}
+
+.mini-card__item .content-category__triplets {
+  background-color: transparent;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-card__item .content-category__item-link:not(:last-child):after {
+  content: "";
+  background: #C4C4C4;
+  border-radius: 50%;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+// bread crumbs effects
+.mini-card__item:hover .content-category__item-link:last-child {
+  color:#003C5A;
+}
+
+.mini-card__item:hover .card-category__triplets {
+  background-color: #F2F2F2;
+}
+
+// content
+.mini-menu__title {
+  margin-top: 15px;
+  margin-bottom: 11px;
+  line-height: 20px;
+  font-size: 24px;
+}
+
+.mini-menu__text {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+// footer panel
+.mini-card__footer-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-card__footer-panel .footer-panel__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-card__footer-panel .footer-panel__item {
+  display: flex;
+  align-items: center;
+}
+
+.mini-card__footer-panel .footer-panel__item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.mini-card__footer-panel .footer-panel__item-counter {
+  font-size: 12px;
+  line-height: 24px;
+  color: #777C86;
+  margin-left: 5px;
+}
+
+.mini-card__time-create {
+  font-size: 12px;
+  line-height: 14px;
+  color: #777C86;
+}
+

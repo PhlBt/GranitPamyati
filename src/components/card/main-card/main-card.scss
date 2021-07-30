@@ -1,0 +1,112 @@
+.main-card__item {
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
+  border-radius: 10px;
+  max-height: 402px;
+}
+
+// bread crumbs
+.main-card__item .content-category__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-card__item .content-category__item-link {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #777C86;
+  position: relative;
+  padding-right: 24px;
+}
+
+.main-card__item .content-category__triplets {
+  background-color: transparent;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card__item .content-category__triplets .content-category__triplets-logo {
+  position: absolute;
+}
+
+.main-card__item .content-category__item-link:not(:last-child):after {
+  content: "";
+  background: #C4C4C4;
+  border-radius: 50%;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+// content
+.main-card__content-container {
+  padding: 18px 25px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-card__content {
+  margin-top: 15px;
+  margin-bottom: 29px;
+}
+
+.main-menu__title {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.main-menu__text {
+  font-size: 14px;
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// footer panel
+.main-card__footer-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-panel__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-panel__item {
+  display: flex;
+  align-items: center;
+}
+
+.footer-panel__item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.footer-panel__item-counter {
+  font-size: 12px;
+  line-height: 24px;
+  color: #777C86;
+  margin-left: 5px;
+}
+
+.main-card__time-create {
+  font-size: 12px;
+  line-height: 14px;
+  color: #777C86;
+}

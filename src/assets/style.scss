@@ -1,0 +1,152 @@
+@import "../components/menu/header__nav/header__nav";
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/location-menu/location-Menu";
+@import "../components/menu/side-menu/side-menu";
+@import "../components/card/main-card/main-card";
+@import "../components/card/mini-card/mini-card";
+@import "../components/menu/footer-nav/footer-nav";
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #333333;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Roboto, serif;
+}
+
+li, ul {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #777C86;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+h1, h2, h3 {
+  color: #003C5A;
+  font-weight: bold;
+  font-family: Open Sans, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  max-width: 930px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-menu__wrapper {
+  max-width: 130px;
+  width: 100%;
+}
+
+.wrapper-content {
+  width: 100%;
+  max-width: 770px;
+}
+
+.card-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card-items > div {
+  margin: 15px 0;
+}
+
+.show-all-card_btn {
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-decoration-line: underline;
+  color: #003C5A;
+}
+
+.show-all-card_btn:hover {
+  cursor: pointer;
+  color: #016BA0;
+}
+
+.show-all-card_btn:active {
+  color: #777C86;
+}
+
+.social-link__inst:hover:not(:active),
+.social-link__f:hover:not(:active),
+.social-link__ok:hover:not(:active),
+.social-link__vk:hover:not(:active) {
+  box-shadow: 0 2px 5px rgba(103, 129, 143, 0.5);
+  border-radius: 24px;
+}
+
+.social-link__inst:active rect {
+  fill: #000000;
+}
+
+.social-link__f:active rect {
+  fill: #335293;
+}
+
+.social-link__ok:active rect {
+  fill: #DB7807;
+}
+
+.social-link__vk:active rect {
+  fill: #3F6B9D;
+}
