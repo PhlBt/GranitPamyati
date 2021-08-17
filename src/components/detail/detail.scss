@@ -7,7 +7,12 @@
 .detail-panel__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+}
+
+.detail-panel__list:first-child {
+  margin-right: 10px;
 }
 
 .detail-panel__list {
@@ -82,4 +87,11 @@
 
 .detail-content__container .content__text {
   margin-bottom: 16px;
+}
+
+
+@media (max-width: 418.98px) {
+  .detail-panel__list:first-child {
+    margin-bottom: 20px;
+  }
 }

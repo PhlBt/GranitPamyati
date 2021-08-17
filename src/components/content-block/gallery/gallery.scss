@@ -17,11 +17,13 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: stretch;
-  height: auto;
+  max-height: 210px;
+  margin-left: 30px;
 }
 
 .article-gallery__right .article-gallery__image {
   max-width: 290px;
+  border-radius: 10px;
 }
 
 .article-gallery__right .article-gallery__image:first-child {
@@ -30,9 +32,4 @@
 
 .article-gallery__left .article-gallery__image {
   max-width: 450px;
-}
-
-.article-gallery__image {
-  height: auto;
-  width: 100%;
 }

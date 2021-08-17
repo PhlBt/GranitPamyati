@@ -25,10 +25,13 @@
   background-color: #003C5A;
 }
 
+.swiper-slide {
+  height: 450px !important;
+  border-radius: 10px;
+}
+
 .swiper-slide img {
-  width: auto;
-  max-height: 450px;
-  object-fit: cover;
+  border-radius: 10px;
 }
 
 .swipe-arrow {
@@ -69,4 +72,17 @@
   color: #777C86;
   margin-top: 10px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 330.98px) {
+  .swiper-arrow-next {
+    right: 10px;
+  }
+
+  .swiper-arrow-prev {
+    left: 10px;
+  }
+  .help-text {
+    font-size: 9px;
+  }
 }
