@@ -1,0 +1,31 @@
+// bread-crumbs
+.bread-crumbs {
+  margin-bottom: 12px;
+}
+
+.bread-crumbs__item {
+  display: inline;
+  position: relative;
+}
+
+.bread-crumbs__item:not(:last-child) {
+  padding-right: 20px;
+  margin-right: 10px;
+}
+
+.bread-crumbs__item:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  width: 12px;
+  height: 1px;
+  background-color: #BDBDBD;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// bread-crumbs effects
+.bread-crumbs__item-link:hover {
+  color: #016BA0;
+  text-decoration: underline;
+}

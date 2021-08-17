@@ -7,11 +7,16 @@
   flex-direction: column;
   margin: 40px 0;
   width: 100%;
+  position: relative;
 }
 
 .footer__inner > div {
   display: flex;
   justify-content: space-between;
+}
+
+.footer__top {
+  align-items: center;
 }
 
 .footer__bottom {
@@ -24,12 +29,31 @@
   justify-content: space-between;
 }
 
+.footer__logo-image {
+  margin-right: 40px;
+}
+
+.footer__logo-text {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  color: #777C86;
+}
+
+.footer__top-logo a {
+  display: flex;
+  align-items: center;
+}
+
 .footer__left-side-text {
   font-size: 14px;
   line-height: 18px;
   color: #777C86;
 }
-.footer__services .footer__services-link{
+
+.footer__services .footer__services-link {
   display: block;
   font-size: 12px;
   line-height: 20px;
@@ -49,6 +73,12 @@
   padding: 8px 35px;
 }
 
+.footer__link-in-shop:hover {
+  background-color: #003C5A;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .footer__link-all {
   font-weight: 500;
   font-size: 13px;
@@ -57,7 +87,7 @@
   border: 1px solid #003C5A;
   box-sizing: border-box;
   border-radius: 20px;
-  padding:5px 15px;
+  padding: 5px 15px;
 }
 
 //address
@@ -105,8 +135,21 @@
   color: #003C5A;
 }
 
+.footer__top-location-menu {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer__link-all-container {
+  margin: 0 40px 0 20px;
+}
+
+.footer__menu-item {
+  width: 55%;
+}
+
 // logo
-.footer__logo {
+.footer__top-logo {
   display: flex;
 }
 
@@ -117,4 +160,83 @@
 
 .footer__social .social-item:not(:last-child) {
   margin-right: 27px;
+}
+
+@media (max-width: 770.98px) {
+  .footer__link-all-container,
+  .footer__menu {
+    display: none;
+  }
+  .footer__left-side-text {
+    font-size: 11px;
+    line-height: 14px;
+    margin-right: 60px;
+  }
+  .footer__lift-side {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 577.98px) {
+  .footer__top-logo,
+  .footer__left-side-text,
+  .footer__top-location-menu {
+    display: none;
+  }
+
+  .footer__services {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer__link-in-shop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 150px;
+    padding: 8px 30px;
+  }
+  .footer__social {
+    width: 100%;
+    padding-right: 35%;
+    justify-content: space-between;
+  }
+  .footer__social .social-item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 577.98px) {
+  .footer__inner {
+    margin: 30px 0 20px;
+  }
+  .footer__link-in-shop {
+    max-width: 210px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer__social {
+    padding-right: 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column-reverse;
+  }
+  .footer__lift-side {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .footer__services .footer__services-link {
+    text-align: center;
+  }
+  .footer__services {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer__services-link {
+    margin-bottom: 5px;
+  }
 }

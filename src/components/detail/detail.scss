@@ -1,0 +1,85 @@
+// panel
+.detail-panel {
+  margin: 20px 0;
+  position: relative;
+}
+
+.detail-panel__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-panel__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-panel__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.detail-panel__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.detail-panel__logo {
+  margin-right: 4px;
+}
+
+.detail-panel__count {
+  font-size: 12px;
+  color: #777C86;
+}
+
+//panel effects
+.detail-panel__item:hover path {
+  fill: #003C5A;
+}
+
+.detail-panel__item svg:active {
+  transform: scale(.9);
+}
+
+// list
+.detail-content-list__container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.detail-info__time-create {
+  font-size: 14px;
+  color: #777C86;
+  padding-right: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.detail-info__time-create::before {
+  content: " ";
+  position: absolute;
+  height: 18px;
+  width: 1px;
+  background-color: #BDBDBD;
+  right: 0;
+}
+
+.detail-info__container {
+  margin: 40px 0;
+}
+
+.detail-info__author-name {
+  font-size: 14px;
+  color: #777C86;
+}
+
+.detail-map {
+  margin: 40px 0;
+}
+
+.detail-content__container .content__text {
+  margin-bottom: 16px;
+}

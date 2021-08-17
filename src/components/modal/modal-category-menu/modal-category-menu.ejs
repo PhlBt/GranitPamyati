@@ -1,0 +1,11 @@
+<div class="modal-category-menu" data-modal-category-item>
+    <ul class="modal-category-menu__items">
+        <% dataCategoryLink.forEach(item => { %>
+            <li class="modal-category-menu__item">
+                <a class="modal-category-menu__item-link" href="<%= item.link%>">
+                    <span class="modal-category-menu__item-text"><%= item.title%></span>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+</div>

@@ -1,10 +1,29 @@
 .header {
   margin: 25px 0;
+  height: 56px;
+  background-color: #FFFFFF;
+  z-index: 999;
 }
 
 .header__container {
   width: 100%;
   align-items: center;
+}
+
+.header__logo-text {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: #003C5A;
+  padding-top: 5px;
+  max-width: 210px;
+  width: 100%;
+}
+
+.header__wrapper-content {
+  flex: 2;
 }
 
 .header__inner {
@@ -15,7 +34,16 @@
 }
 
 .header__logo {
-  margin-right: 40px;
+  margin-right: 30px;
+}
+
+.header__logo a {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-image {
+  margin-right: 30px;
 }
 
 .header__content-text {
@@ -31,4 +59,96 @@
 
 .header__social .social-item:not(:last-child) {
   margin-right: 20px;
+}
+
+// menu-burger
+.header__menu-burger-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__menu-burger-btn.default {
+  background-color: #003C5A;
+  border: 2px solid #003C5A;
+}
+
+.header__menu-burger-btn.active {
+  background-color: #ffffff;
+  border: 2px solid #777C86;
+}
+
+// menu-burger effects
+.header__menu-burger-btn.active:hover path {
+  fill: #003C5A;
+}
+
+.header__menu-burger-btn.active:hover {
+  background-color: #ffffff;
+}
+
+.header__menu-burger-btn.default:hover {
+  background-color: #ffffff;
+  border: 2px solid #003C5A;
+}
+
+@media (max-width: 860.98px) {
+  .header {
+    position: fixed;
+    top: 0;
+    padding: 25px 0;
+    height: 106px;
+    width: 100%;
+    margin: 0;
+  }
+  .header__content-text {
+    display: none;
+  }
+
+  .header__menu-burger-btn {
+    display: flex;
+  }
+  .burger-btn__close {
+    display: none;
+  }
+  .header__social {
+    width: 65%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 770.98px) {
+  .header__social .social-item:not(:last-child) {
+    margin-right: 0;
+  }
+  .header__wrapper-content {
+    max-width: 330px;
+  }
+  .header__container {
+    padding: 0 40px;
+  }
+  .header__logo {
+    margin-right: 0;
+  }
+  .header__logo-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 630.98px) {
+  .header__inner {
+    justify-content: flex-end;
+  }
+  .header__social {
+    display: none;
+  }
+}
+
+@media (max-width: 450.98px) {
+  .header__logo-text {
+    display: none;
+  }
 }

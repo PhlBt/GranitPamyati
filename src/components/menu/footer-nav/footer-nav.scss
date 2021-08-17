@@ -16,6 +16,7 @@
 .footer__nav-menu-item:not(:last-child) {
   margin-right: 5px;
 }
+
 .footer__nav-menu-item .nav__menu-link {
   font-size: 14px;
   line-height: 16px;
@@ -37,4 +38,10 @@
   color: #777C86;
   background: #F2F2F2;
   border-radius: 10px;
+}
+
+@media (max-width: 770.98px) {
+  .footer__nav {
+    display: none;
+  }
 }

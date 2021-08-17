@@ -1,0 +1,131 @@
+.about-form {
+  margin-bottom: 60px;
+}
+
+.about-form__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.about-form__group-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-form__input,
+.about-form__textarea {
+  border: 1px solid #777C86;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 16px;
+  color: #003C5A;
+  padding: 11px 11px 11px 46px;
+}
+
+.about-form__textarea-item {
+  max-width: 770px;
+  width: 100%;
+  position: relative;
+}
+
+.about-form__textarea {
+  resize: none;
+  outline: none;
+  font-family: Roboto, serif;
+}
+
+.about-form__input::placeholder,
+.about-form__textarea::placeholder {
+  font-size: 16px;
+  color: #777C86;
+}
+
+.about-form__input:focus,
+.about-form__textarea:focus {
+  border: 2px solid #003C5A;
+  padding: 10px 10px 10px 45px;
+}
+
+.about-form__input:focus + .about-form__input-icon + .about-form__required-ellipse,
+.about-form__textarea:focus + .about-form__input-icon + .about-form__required-ellipse {
+  display: none;
+}
+
+.about-form__input:focus + .about-form__input-icon path,
+.about-form__textarea:focus + .about-form__input-icon path {
+  fill: #003C5A;
+}
+
+.about-form__input-item {
+  position: relative;
+  max-width: 370px;
+  width: calc(50% - 15px);
+}
+
+.about-form__input-icon {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+}
+
+.about-form__btn {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #003C5A;
+  border: 2px solid #003C5A;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  padding: 12px 24px;
+}
+
+.about-form__btn:hover {
+  background-color: #003C5A;
+  color: #FFFFFF;
+}
+
+.about-form__help-text {
+  font-size: 11px;
+  line-height: 130%;
+  color: #777C86;
+  margin-left: 30px;
+}
+
+.about-form__required-ellipse {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #961E00;
+  border-radius: 50%;
+  right: 10px;
+  top: 10px;
+}
+
+@media (max-width: 577.98px) {
+  .about-form__input-item {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-form__input-item:first-child {
+    margin-bottom: 15px;
+  }
+  .about-form__group {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 331.98px) {
+  .about-form__group-btn {
+    flex-wrap: wrap-reverse;
+  }
+
+  .about-form__help-text {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,45 @@
+// tags
+.article-tags {
+  display: flex;
+  height: 35px;
+  padding: 0 15px 10px 15px;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  margin: 40px 0 20px;
+}
+
+.article-tags__title {
+  color: #777C86;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.article-tags__list {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.article-tags__item {
+  color: #777C86;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+
+.article-tags__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+// tags effect
+.article-tags__item:hover {
+  color: #003C5A;
+  cursor: pointer;
+}
+
+
+@media (max-width: 577.98px) {
+  .article-tags {
+    height: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+// menu modal
+.modal-share-menu.active {
+  display: block;
+}
+
+.modal-share-menu {
+  z-index: 9999;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  width: 180px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
+  border-radius: 10px;
+  display: none;
+}
+
+.modal-share-menu__items {
+  padding: 10px;
+}
+
+.modal-share-menu__item {
+  padding: 5px 10px;
+}
+
+.modal-share-menu__item-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.modal-share-menu__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.modal-share-menu__item-logo {
+  margin-right: 11px;
+}
+
+.modal-share-menu__item-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #777C86;
+}
+
+// menu modal effects
+.modal-share-menu__item:hover {
+  background: #F0F2F5;
+  border-radius: 10px;
+}
+
+.modal-share-menu__item:hover .modal-share-menu__item-text {
+  color: #003C5A;
+}

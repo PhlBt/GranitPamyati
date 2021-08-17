@@ -1,3 +1,10 @@
+.side-menu {
+  width: 130px;
+}
+.side-menu.fixed {
+  position: fixed;
+  top: 25px;
+}
 // top link
 .side-menu__inner-top .inner-top__link {
   border: 2px solid #003C5A;
@@ -65,6 +72,26 @@
 
 .side__menu-link:active {
   font-weight: 500;
+}
+
+.side__menu-item.active .side__menu-link {
+  color: #961E00;
+  font-weight: 500;
+}
+
+.side__menu-item {
+  position: relative;
+}
+
+.side__menu-item.active:before {
+  position: absolute;
+  content: " ";
+  left: -10px;
+  top: 14px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #961E00;
 }
 
 // link bottom
