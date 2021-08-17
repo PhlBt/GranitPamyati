@@ -60,13 +60,17 @@ listContainerDropdown.forEach(i => {
     let linkShare = i.querySelector("[data-modal-share]");
     let linkTriplets = i.querySelector("[data-modal-triplets]");
 
-    linkShare.addEventListener('click', ev => {
-        i.querySelector("[data-modal-share-item]").classList.toggle("active");
-    });
+    if (linkShare) {
+        linkShare.addEventListener('click', ev => {
+            i.querySelector("[data-modal-share-item]").classList.toggle("active");
+        });
+    }
 
-    linkTriplets.addEventListener('click', ev => {
-        i.querySelector("[data-modal-category-item]").classList.toggle("active");
-    });
+    if (linkTriplets) {
+        linkTriplets.addEventListener('click', ev => {
+            i.querySelector("[data-modal-category-item]").classList.toggle("active");
+        });
+    }
 
     document.addEventListener('click', ev => {
         if (!ev.target.closest('[data-modal-share-item]') && !ev.target.closest('[data-modal-category-item]') && !ev.target.closest("[data-modal-share]") && !ev.target.closest("[data-modal-triplets]")) {
@@ -84,18 +88,18 @@ listContainerDropdown.forEach(i => {
 //side menu fixed
 let sideMenu = document.querySelector('.side-menu');
 
-window.addEventListener('scroll', () => {
+document.addEventListener('scroll', () => {
     if (pageYOffset > 149) {
         sideMenu.classList.add('fixed');
     } else {
         sideMenu.classList.remove('fixed');
     }
 });
+
 //side menu fixed
 let locationMenu = document.querySelector('.location-menu');
 
-window.addEventListener('scroll', () => {
-    console.log(pageYOffset)
+document.addEventListener('scroll', () => {
     if (pageYOffset > 15) {
         locationMenu.classList.add('box-shadow');
     } else {

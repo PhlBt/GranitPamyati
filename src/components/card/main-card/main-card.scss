@@ -19,6 +19,7 @@
   text-decoration-line: underline;
   color: #777C86;
   position: relative;
+  cursor: pointer;
 }
 
 .main-article-card__item .content-category__item-link:not(:first-child) {
@@ -69,7 +70,7 @@
 
 // content
 .main-article-card__content-container {
-  padding: 18px 25px 28px 30px;
+  padding: 18px 25px 21px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
