@@ -31,26 +31,6 @@ questionList.forEach(i => {
     });
 });
 
-// search modal open
-let searchModalItem = document.querySelector("[data-search-modal]");
-
-document.addEventListener('click', ev => {
-    if (ev.target.closest('[data-search-modal-btn]')) {
-        searchModalItem.classList.toggle("open");
-    }
-});
-
-// search modal close
-document.addEventListener('click', ev => {
-    if (!ev.target.closest('[data-search-modal]') && !ev.target.closest('[data-search-modal-btn]')) {
-        searchModalItem.classList.remove("open");
-    }
-
-    if (ev.target.closest('[data-search-modal-close]')) {
-        searchModalItem.classList.remove("open");
-    }
-});
-
 //dropdown
 let listContainerDropdown = document.querySelectorAll("[data-dropdown-modal]");
 let listDropdownShareItem = document.querySelectorAll("[data-modal-share-item]");
@@ -85,18 +65,7 @@ listContainerDropdown.forEach(i => {
     });
 });
 
-//side menu fixed
-let sideMenu = document.querySelector('.side-menu');
-
-document.addEventListener('scroll', () => {
-    if (pageYOffset > 149) {
-        sideMenu.classList.add('fixed');
-    } else {
-        sideMenu.classList.remove('fixed');
-    }
-});
-
-//side menu fixed
+//side menu fixed desktop
 let locationMenu = document.querySelector('.location-menu');
 
 document.addEventListener('scroll', () => {
@@ -104,5 +73,34 @@ document.addEventListener('scroll', () => {
         locationMenu.classList.add('box-shadow');
     } else {
         locationMenu.classList.remove('box-shadow');
+    }
+});
+
+// search modal open
+document.addEventListener('click', ev => {
+    if (ev.target.closest('[data-search-modal-btn]')) {
+        let container = ev.target.closest('[data-search-modal-container]');
+        let formModal = container.querySelector('[data-search-modal]');
+
+        if (formModal) {
+            formModal.classList.toggle('open');
+        }
+    }
+});
+
+// search modal close
+document.addEventListener('click', ev => {
+    if (!ev.target.closest('[data-search-modal]') && !ev.target.closest('[data-search-modal-btn]')) {
+        let searchModalItems = document.querySelectorAll('[data-search-modal]');
+
+        searchModalItems.forEach(item => {
+            if (item.classList.contains('open')) {
+                item.classList.remove('open');
+            }
+        });
+    }
+
+    if (ev.target.closest('[data-search-modal-close]')) {
+        ev.target.closest('[data-search-modal]').classList.remove("open");
     }
 });
