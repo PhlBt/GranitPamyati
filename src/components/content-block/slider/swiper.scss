@@ -39,6 +39,8 @@
   height: 50px !important;
   position: absolute;
   top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
   transform: translateY(-45%);
   z-index: 9999;
   cursor: pointer;
@@ -55,11 +57,15 @@
 
 .swiper-arrow-next {
   right: 20px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .swiper-arrow-prev {
   left: 20px;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 

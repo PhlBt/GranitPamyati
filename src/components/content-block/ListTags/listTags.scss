@@ -1,5 +1,7 @@
 // tags
 .article-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 35px;
   padding: 0 15px 10px 15px;
@@ -16,8 +18,11 @@
 }
 
 .article-tags__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
