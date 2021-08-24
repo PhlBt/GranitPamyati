@@ -1,0 +1,17 @@
+<div class="modal" data-modal="1">
+    <svg class="modal__cross js-modal-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.0005 10.172L22.9005 0.271973L25.7285 3.09997L15.8285 13L25.7285 22.9L22.9005 25.728L13.0005 15.828L3.10046 25.728L0.272461 22.9L10.1725 13L0.272461 3.09997L3.10046 0.271973L13.0005 10.172Z" fill="#E0E4EB"/>
+    </svg>
+
+    <p class="modal__title">
+        <% let linkImage = [
+            {image: "static/Rectangle 61.png"},
+            {image: "static/Rectangle 61.png"},
+            {image: "static/Rectangle 61.png"},
+            {image: "static/Rectangle 61.png"}
+        ] %>
+        <%- include('../slider/swiper', {linkImage}); -%>
+    </p>
+</div>
+
+<div class="overlay js-overlay-modal"></div>

@@ -8,6 +8,11 @@
 .header__container {
   width: 100%;
   align-items: center;
+  max-width: 970px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 0 15px;
 }
 
 .header__logo-text {
@@ -42,8 +47,9 @@
   align-items: center;
 }
 
-.header__logo-image {
+.header__logo-icon {
   margin-right: 30px;
+  width: 158px;
 }
 
 .header__content-text {
@@ -135,8 +141,17 @@
   }
 }
 
+@media (max-width: 577.98px) {
+  .header__container {
+    padding: 0 35px;
+  }
+}
+
 @media (max-width: 450.98px) {
   .header__logo-text {
     display: none;
+  }
+  .header__container {
+    padding: 0 15px 0 0;
   }
 }

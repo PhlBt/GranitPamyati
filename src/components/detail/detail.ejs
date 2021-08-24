@@ -96,14 +96,17 @@
         восшествия на трон Петра I, и лучшей даты для реализации этой идеи было не найти.
     </p>
 </div>
-<% let linkImage = [
-    {image: "static/Rectangle 60.png", sourceText: "Источник фото1: https://kudago.com/spb/place/mednyj-vsadnik/" },
-    {image: "static/Rectangle 61.png", sourceText: "Источник фото2: https://kudago.com/spb/place/mednyj-vsadnik/" },
-    {image: "static/Rectangle 62.png", sourceText: "Источник фото3: https://kudago.com/spb/place/mednyj-vsadnik/" },
-    {image: "static/Rectangle 63.png", sourceText: "Источник фото4: https://kudago.com/spb/place/mednyj-vsadnik/" },
-    {image: "static/Rectangle 64.png", sourceText: "Источник фото5: https://kudago.com/spb/place/mednyj-vsadnik/" }
-] %>
-<%- include('../content-block/slider/swiper', {linkImage}); -%>
+<div class="detail-content__slider">
+    <% let linkImage = [
+        {image: "static/Rectangle 60.png"},
+        {image: "static/Rectangle 61.png"},
+        {image: "static/Rectangle 62.png"},
+        {image: "static/Rectangle 63.png"},
+        {image: "static/Rectangle 64.png"}
+    ] %>
+    <%- include('../content-block/slider/swiper', {linkImage}); -%>
+    <p data-source-targer class="help-text">Источник фото: https://kudago.com/spb/place/mednyj-vsadnik/</p>
+</div>
 <div class="detail-content__container">
     <h2 class="content__title">
         Интересные факты, мифы и легенды
@@ -223,3 +226,60 @@
         <%- include('../modal/modal-share-menu/modal-share-menu'); -%>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    //modal gallery
+    !function (e) {
+        "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function (e) {
+            for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n;
+            return Boolean(o[n])
+        }), "function" != typeof e.closest && (e.closest = function (e) {
+            for (var t = this; t && 1 === t.nodeType;) {
+                if (t.matches(e)) return t;
+                t = t.parentNode
+            }
+            return null
+        })
+    }(window.Element.prototype);
+
+    let modalButtons = document.querySelectorAll('.js-open-modal'),
+        overlay = document.querySelector('.js-overlay-modal'),
+        closeButtons = document.querySelectorAll('.js-modal-close');
+
+    modalButtons.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let modalId = this.getAttribute('data-modal'),
+                modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+            modalElem.classList.add('active');
+            overlay.classList.add('active');
+        });
+    });
+
+    closeButtons.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            let parentModal = this.closest('.modal');
+
+            parentModal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+    });
+
+    document.body.addEventListener('keyup', function (e) {
+        let key = e.keyCode;
+
+        if (key == 27) {
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        }
+    }, false);
+
+    overlay.addEventListener('click', function () {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+    });
+    });
+</script>

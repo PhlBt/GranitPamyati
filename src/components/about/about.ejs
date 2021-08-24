@@ -14,14 +14,17 @@
             использовании всегда остается эффективным инструментом для работы с аудиторией проекта.
         </p>
     </div>
-    <% let linkImage = [
-        {image: "static/Rectangle 60.png", sourceText: "Источник фото1: https://kudago.com/spb/place/mednyj-vsadnik/" },
-        {image: "static/Rectangle 61.png", sourceText: "Источник фото2: https://kudago.com/spb/place/mednyj-vsadnik/" },
-        {image: "static/Rectangle 62.png", sourceText: "Источник фото3: https://kudago.com/spb/place/mednyj-vsadnik/" },
-        {image: "static/Rectangle 63.png", sourceText: "Источник фото4: https://kudago.com/spb/place/mednyj-vsadnik/" },
-        {image: "static/Rectangle 64.png", sourceText: "Источник фото5: https://kudago.com/spb/place/mednyj-vsadnik/" }
-    ] %>
-    <%- include('../content-block/slider/swiper', {linkImage}); -%>
+    <div class="detail-content__slider">
+        <% let linkImage = [
+            {image: "static/Rectangle 60.png", sourceText: "Источник фото1: https://kudago.com/spb/place/mednyj-vsadnik/" },
+            {image: "static/Rectangle 61.png", sourceText: "Источник фото2: https://kudago.com/spb/place/mednyj-vsadnik/" },
+            {image: "static/Rectangle 62.png", sourceText: "Источник фото3: https://kudago.com/spb/place/mednyj-vsadnik/" },
+            {image: "static/Rectangle 63.png", sourceText: "Источник фото4: https://kudago.com/spb/place/mednyj-vsadnik/" },
+            {image: "static/Rectangle 64.png", sourceText: "Источник фото5: https://kudago.com/spb/place/mednyj-vsadnik/" }
+        ] %>
+        <%- include('../content-block/slider/swiper', {linkImage}); -%>
+        <p data-source-targer class="help-text">Источник фото: https://kudago.com/spb/place/mednyj-vsadnik/</p>
+    </div>
     <div class="about-content__container">
         <h2 class="content__title">Команда рассказывает о проекте</h2>
         <p class="content__text">

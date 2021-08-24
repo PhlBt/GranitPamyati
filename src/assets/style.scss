@@ -21,6 +21,7 @@
 @import "../components/about/about";
 @import "../components/content-block/detailList-menu-links/menuLinks";
 @import "../components/content-block/forms/location-search/locationSearch";
+@import "../components/content-block/modal/modal";
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -45,6 +46,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 body {
   font-size: 14px;
@@ -124,10 +126,10 @@ svg path {
 }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 15px;
 }
 
@@ -135,11 +137,14 @@ svg path {
   max-width: 130px;
   width: 100%;
   position: relative;
+  margin-right: 2%;
 }
 
 .wrapper-content {
   width: 100%;
-  max-width: 770px;
+  max-width: 790px;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 .social-link__inst:hover:not(:active),
@@ -212,6 +217,7 @@ svg path {
   .main-menu__wrapper {
     width: 0;
     position: static;
+    margin: 0;
   }
   h2 {
     font-size: 22px;
@@ -220,22 +226,18 @@ svg path {
     font-size: 24px;
   }
   .wrapper {
-    padding: 0 39px;
+    padding: 0 29px;
   }
 }
 
 @media (max-width: 577.98px) {
   .wrapper {
-    padding: 0 33px;
-  }
-  .social-link svg {
-    height: 48px;
-    width: 48px;
+    padding: 0 23px;
   }
 }
 
 @media (max-width: 450.98px) {
   .wrapper {
-    padding: 0 15px!important;
+    padding: 0 5px!important;
   }
 }

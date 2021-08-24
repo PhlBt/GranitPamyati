@@ -1,7 +1,7 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <% linkImage.forEach(item => { %>
-            <div data-source-text="<%=item.sourceText%>" class="swiper-slide"><img src="<%= item.image %>" alt=""></div>
+            <div class="swiper-slide"><img src="<%= item.image %>" alt=""></div>
         <% }); %>
     </div>
 
@@ -19,4 +19,3 @@
         </svg>
     </div>
 </div>
-<p data-source-targer class="help-text"></p>

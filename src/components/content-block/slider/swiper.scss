@@ -1,8 +1,4 @@
 // swiper
-.swiper-container {
-  margin-top: 30px;
-}
-
 .swiper-pagination {
   bottom: 25px !important;
 }
@@ -32,6 +28,10 @@
 
 .swiper-slide img {
   border-radius: 10px;
+}
+
+.modal .swiper-slide img {
+  border-radius: 0;
 }
 
 .swipe-arrow {
@@ -71,7 +71,6 @@
   text-align: center;
   color: #777C86;
   margin-top: 10px;
-  margin-bottom: 40px;
 }
 
 @media (max-width: 330.98px) {

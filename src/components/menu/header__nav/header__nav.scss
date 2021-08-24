@@ -6,6 +6,11 @@
 .header__nav-inner {
   text-align: center;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 980px;
+  padding: 0 25px 0 15px;
 }
 
 .header__nav-menu {
@@ -16,6 +21,7 @@
 .header__nav-menu-item:not(:last-child) {
   margin-right: 15px;
 }
+
 .header__nav-menu-item .nav__menu-link {
   font-size: 12px;
   line-height: 14px;

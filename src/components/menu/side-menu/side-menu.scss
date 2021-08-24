@@ -90,7 +90,8 @@
   position: absolute;
   content: " ";
   left: -10px;
-  top: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 5px;
   height: 5px;
   border-radius: 50%;
