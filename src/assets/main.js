@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //dropdown
     let listContainerDropdown = document.querySelectorAll("[data-dropdown-modal]");
-    let listDropdownShareItem = document.querySelectorAll("[data-modal-share-item]");
-    let listDropdownCategoryItem = document.querySelectorAll("[data-modal-category-item]");
+    let listDropdownShareItems = document.querySelectorAll("[data-modal-share-item]");
+    let listDropdownCategoryItems = document.querySelectorAll("[data-modal-category-item]");
 
     listContainerDropdown.forEach(i => {
         let linkShare = i.querySelector("[data-modal-share]");
@@ -35,23 +35,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (linkShare) {
             linkShare.addEventListener('click', ev => {
+                listDropdownShareItems.forEach(item => {
+                    item.classList.remove("active")
+                });
+                listDropdownCategoryItems.forEach(item => {
+                    item.classList.remove("active")
+                });
                 i.querySelector("[data-modal-share-item]").classList.toggle("active");
             });
         }
 
         if (linkTriplets) {
             linkTriplets.addEventListener('click', ev => {
+                listDropdownShareItems.forEach(item => {
+                    item.classList.remove("active")
+                });
+                listDropdownCategoryItems.forEach(item => {
+                    item.classList.remove("active")
+                });
                 i.querySelector("[data-modal-category-item]").classList.toggle("active");
             });
         }
 
         document.addEventListener('click', ev => {
             if (!ev.target.closest('[data-modal-share-item]') && !ev.target.closest('[data-modal-category-item]') && !ev.target.closest("[data-modal-share]") && !ev.target.closest("[data-modal-triplets]")) {
-                listDropdownShareItem.forEach(item => {
+                listDropdownShareItems.forEach(item => {
                     item.classList.remove("active")
                 });
 
-                listDropdownCategoryItem.forEach(item => {
+                listDropdownCategoryItems.forEach(item => {
                     item.classList.remove("active")
                 });
             }
