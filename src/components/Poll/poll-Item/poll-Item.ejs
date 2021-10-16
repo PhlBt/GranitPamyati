@@ -1,0 +1,56 @@
+<% dataQuestion.forEach(item => { %>
+    <div class="question-item_container">
+        <h3 class="question-item_title"><%= item.title %></h3>
+        <form class="question-item_form">
+            <div class="question-option_container">
+                <% if (item.imageQuestion) { %>
+                    <ul class="question-option_list">
+                        <% item.list.forEach((item, index) => { %>
+                            <li class="question-option_item">
+                                <div class="question-option_item-container">
+                                    <img class="question-option_image"
+                                         src="<%= item.option %>"
+                                         alt=""
+                                    >
+                                    <span class="question-option_subText">
+                                    Вариант № <%= index + 1 %>
+                                </span>
+                                </div>
+                            </li>
+                        <% }); %>
+                    </ul>
+                <% } else { %>
+                    <div>
+                        <p>
+                            <%= item.optionQuestion %>
+                        </p>
+                    </div>
+                <% } %>
+            </div>
+            <div class="question-answer_container">
+                <ul class="question-answer_list">
+                    <% item.list.forEach((item, index) => { %>
+                        <li class="question-answer_item">
+                            <div class="question-answer_item-container">
+                                <label class="question-answer_item-label">
+                                    <input type="radio"
+                                           name="question"
+                                           class="question-answer_item-input"
+                                    >
+                                    <span class="question-answer_item-number">
+                                    <%= index + 1 %>.
+                                </span>
+                                    <%= item.answer %>
+                                </label>
+                            </div>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+            <button type="submit"
+                    class="question-btn"
+            >Голосовать
+            </button>
+        </form>
+    </div>
+<% }); %>

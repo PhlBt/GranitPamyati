@@ -22,6 +22,8 @@
 @import "../components/content-block/detailList-menu-links/menuLinks";
 @import "../components/content-block/forms/location-search/locationSearch";
 @import "../components/content-block/modal/modal";
+@import "../components/Poll/Poll";
+@import "../components/Poll/poll-Item/poll-Item";
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -73,6 +75,7 @@ input {
   font-size: 16px;
   outline: none;
   border: none;
+  margin: 0;
 }
 
 a {
