@@ -11,6 +11,7 @@
 @import "../components/content-block/slider/swiper";
 @import "../components/content-block/question/question";
 @import "../components/content-block/forms/aboutForm";
+@import "../components/content-block/forms/aboutAurhorForm/aboutAurhorForm";
 @import "../components/content-block/ListTags/listTags";
 @import "../components/content-block/gallery/gallery";
 @import "../components/content-block/bread-crumbs/bread-crumbs";
@@ -24,6 +25,7 @@
 @import "../components/content-block/modal/modal";
 @import "../components/Poll/Poll";
 @import "../components/Poll/poll-Item/poll-Item";
+@import "../components/about-author/about-author";
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
