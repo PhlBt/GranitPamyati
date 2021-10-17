@@ -26,6 +26,10 @@
 @import "../components/Poll/Poll";
 @import "../components/Poll/poll-Item/poll-Item";
 @import "../components/about-author/about-author";
+@import "../components/dashboard/dashboard";
+@import "../components/dashboard/author-card/authorСard";
+@import "../components/dashboard/list-articles/listArticles";
+@import "../components/content-block/forms/edit-profile/editProfile";
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;

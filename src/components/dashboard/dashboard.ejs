@@ -1,0 +1,67 @@
+<%- include('author-card/authorСard'); -%>
+
+<%
+var data = [
+    {
+        name: "Название статьи",
+        state: "published",
+        countView: 550,
+        countLike: 550
+    },
+    {
+        name: "Название статьи",
+        state: "published",
+        countView: 550,
+        countLike: 550
+    },
+    {
+        name: "Название статьи",
+        state: "published",
+        countView: 550,
+        countLike: 550
+    },
+    {
+        name: "Название статьи",
+        state: "published",
+        countView: 550,
+        countLike: 550
+    },
+    {
+        name: "Название статьи",
+        state: "moderation",
+        countView: 100,
+        countLike: 10
+    },
+    {
+        name: "Название статьи",
+        state: "moderation",
+        countView: 100,
+        countLike: 10
+    },
+    {
+        name: "Название статьи",
+        state: "moderation",
+        countView: 100,
+        countLike: 10
+    },
+    {
+        name: "Название статьи",
+        state: "moderation",
+        countView: 100,
+        countLike: 10
+    },
+    {
+        name: "Название статьи",
+        state: "rejected",
+        countView: 0,
+        countLike: 0
+    },
+    {
+        name: "Название статьи",
+        state: "draft",
+        countView: 0,
+        countLike: 0
+    }
+]
+%>
+<%- include('list-articles/listArticles', {data}); -%>

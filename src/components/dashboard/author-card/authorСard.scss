@@ -1,0 +1,58 @@
+.author-card__logo-container {
+  margin-right: 30px;
+}
+
+.author-card__logo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.author-card__logo-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #E0E4EB;
+}
+
+.author-card__logo__switch-btn {
+  color: #777C86;
+  text-decoration-line: underline;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.author-card__profile {
+  margin-top: 30px;
+  background-color: #F2F7FA;
+  padding: 30px;
+  display: flex;
+}
+
+.author-card__profile-data {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.author-card__data-item {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.author-card__list-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-card__list-btn a {
+  font-size: 14px;
+  color: #016BA0;
+  line-height: 160%;
+  text-decoration-line: underline;
+}
+
+.author-card__list-btn a:not(:last-child) {
+  margin-bottom: 10px;
+}

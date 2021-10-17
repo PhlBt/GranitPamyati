@@ -1,0 +1,83 @@
+<div class="profile-articles">
+    <h3 class="profile-articles__title">Мои статьи</h3>
+    <div class="profile-articles__dashboard">
+        <div class="profile-articles__dropdown">
+            <input type="hidden" id="profile-articles__input">
+            <button class="profile-articles__dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                Все города
+                <svg class="profile-articles__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.9997 1.16994C10.8123 0.983692 10.5589 0.87915 10.2947 0.87915C10.0305 0.87915 9.77707 0.983692 9.5897 1.16994L5.9997 4.70994L2.4597 1.16994C2.27234 0.983692 2.01889 0.87915 1.7547 0.87915C1.49052 0.87915 1.23707 0.983692 1.0497 1.16994C0.955976 1.26291 0.881582 1.37351 0.830813 1.49537C0.780044 1.61723 0.753906 1.74793 0.753906 1.87994C0.753906 2.01195 0.780044 2.14266 0.830813 2.26452C0.881582 2.38638 0.955976 2.49698 1.0497 2.58994L5.2897 6.82994C5.38267 6.92367 5.49327 6.99806 5.61513 7.04883C5.73699 7.0996 5.86769 7.12574 5.9997 7.12574C6.13172 7.12574 6.26242 7.0996 6.38428 7.04883C6.50614 6.99806 6.61674 6.92367 6.7097 6.82994L10.9997 2.58994C11.0934 2.49698 11.1678 2.38638 11.2186 2.26452C11.2694 2.14266 11.2955 2.01195 11.2955 1.87994C11.2955 1.74793 11.2694 1.61723 11.2186 1.49537C11.1678 1.37351 11.0934 1.26291 10.9997 1.16994Z" fill="#777C86"/>
+                </svg>
+            </button>
+            <ul class="profile-articles__dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><span class="profile-articles__dropdown-item">Тольятти</span></li>
+                <li><span class="profile-articles__dropdown-item">Тольятти</span></li>
+                <li><span class="profile-articles__dropdown-item">Тольятти</span></li>
+            </ul>
+        </div>
+        <ul class="profile-articles__sort-panel">
+            Сортировать по:
+            <li class="profile-articles__sort-item">статусу</li>
+            <li class="profile-articles__sort-item active">просмотрам</li>
+            <li class="profile-articles__sort-item">лайкам</li>
+        </ul>
+    </div>
+    <div class="profile-articles__container">
+        <ul class="profile-articles__list">
+            <% data.forEach(item => { %>
+                <li class="profile-articles__item">
+                    <span class="profile-articles__name"><%=item.name %></span>
+                    <div class="profile-articles__item-data">
+                        <% switch (item.state) {
+                        case "published": %>
+                        <span class="profile-articles__state published">Опубликована</span>
+                        <% break;
+                        case "moderation": %>
+                        <span class="profile-articles__state moderation">На модерации</span>
+                        <% break;
+                        case "rejected": %>
+                        <span class="profile-articles__state rejected">Отклонена</span>
+                        <% break;
+                        case "draft": %>
+                        <span class="profile-articles__state draft">Черновик</span>
+                        <% break;
+                        } %>
+                        <div class="profile-articles__count-item">
+                            <svg class="profile-articles__views-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0006 3C17.3926 3 21.8786 6.88 22.8196 12C21.8796 17.12 17.3926 21 12.0006 21C6.60864 21 2.12264 17.12 1.18164 12C2.12164 6.88 6.60864 3 12.0006 3ZM12.0006 19C14.0401 18.9996 16.019 18.3068 17.6135 17.0352C19.208 15.7635 20.3235 13.9883 20.7776 12C20.3219 10.0133 19.2056 8.24 17.6113 6.97003C16.017 5.70005 14.0389 5.00853 12.0006 5.00853C9.96234 5.00853 7.98433 5.70005 6.39002 6.97003C4.7957 8.24 3.67941 10.0133 3.22364 12C3.67774 13.9883 4.79331 15.7635 6.38778 17.0352C7.98225 18.3068 9.96117 18.9996 12.0006 19ZM12.0006 16.5C10.8072 16.5 9.66257 16.0259 8.81866 15.182C7.97475 14.3381 7.50064 13.1935 7.50064 12C7.50064 10.8065 7.97475 9.66193 8.81866 8.81802C9.66257 7.97411 10.8072 7.5 12.0006 7.5C13.1941 7.5 14.3387 7.97411 15.1826 8.81802C16.0265 9.66193 16.5006 10.8065 16.5006 12C16.5006 13.1935 16.0265 14.3381 15.1826 15.182C14.3387 16.0259 13.1941 16.5 12.0006 16.5ZM12.0006 14.5C12.6637 14.5 13.2996 14.2366 13.7684 13.7678C14.2372 13.2989 14.5006 12.663 14.5006 12C14.5006 11.337 14.2372 10.7011 13.7684 10.2322C13.2996 9.76339 12.6637 9.5 12.0006 9.5C11.3376 9.5 10.7017 9.76339 10.2329 10.2322C9.76403 10.7011 9.50064 11.337 9.50064 12C9.50064 12.663 9.76403 13.2989 10.2329 13.7678C10.7017 14.2366 11.3376 14.5 12.0006 14.5Z" fill="#777C86"/>
+                            </svg>
+                            <span class="profile-articles__count"><%=item.countView %></span>
+                        </div>
+                        <div class="profile-articles__count-item">
+                            <svg class="profile-articles__like-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.6 8.00003H21C21.5304 8.00003 22.0391 8.21074 22.4142 8.58581C22.7893 8.96089 23 9.46959 23 10V12.104C23.0003 12.3654 22.9493 12.6243 22.85 12.866L19.755 20.381C19.6795 20.5642 19.5513 20.7209 19.3866 20.8311C19.2219 20.9413 19.0282 21.0001 18.83 21H2C1.73478 21 1.48043 20.8947 1.29289 20.7071C1.10536 20.5196 1 20.2652 1 20V10C1 9.73481 1.10536 9.48046 1.29289 9.29292C1.48043 9.10538 1.73478 9.00003 2 9.00003H5.482C5.6421 9.00007 5.79986 8.96167 5.94203 8.88806C6.0842 8.81445 6.20662 8.70778 6.299 8.57703L11.752 0.850026C11.8209 0.752339 11.9226 0.682586 12.0385 0.653416C12.1545 0.624246 12.277 0.637589 12.384 0.691026L14.198 1.59803C14.7085 1.85319 15.1163 2.27534 15.3537 2.79434C15.5911 3.31334 15.6438 3.89795 15.503 4.45103L14.6 8.00003ZM7 10.588V19H18.16L21 12.104V10H14.6C14.2954 9.99998 13.9948 9.93036 13.7212 9.79648C13.4476 9.6626 13.2082 9.468 13.0213 9.22751C12.8343 8.98703 12.7048 8.70702 12.6425 8.40885C12.5803 8.11068 12.5869 7.80223 12.662 7.50703L13.565 3.95903C13.5933 3.84835 13.5828 3.73134 13.5353 3.62745C13.4878 3.52357 13.4062 3.43907 13.304 3.38803L12.643 3.05803L7.933 9.73003C7.683 10.084 7.363 10.374 7 10.588ZM5 11H3V19H5V11Z" fill="#777C86"/>
+                            </svg>
+                            <span class="profile-articles__count"><%=item.countLike %></span>
+                        </div>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="profile-articles__pagination">
+        <span class="pagination-btn">Все</span>
+        <ul class="pagination__container">
+            <li class="pagination__item">
+                <span class="pagination-btn">1</span>
+            </li>
+            <li class="pagination__item">
+                <span class="pagination-btn">2</span>
+            </li>
+            <li class="pagination__item">
+                <span class="pagination-btn">3</span>
+            </li>
+            <li class="pagination__item">
+                <span class="pagination-btn">...</span>
+            </li>
+            <li class="pagination__item">
+                <span class="pagination-btn">10</span>
+            </li>
+        </ul>
+    </div>
+    <button class="create-articles__btn">Создать статью</button>
+</div>

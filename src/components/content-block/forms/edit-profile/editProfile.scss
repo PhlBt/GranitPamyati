@@ -1,0 +1,30 @@
+.edit-profile-form__group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.edit-profile-form__input {
+  border: 1px solid #777C86;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 290px;
+  min-width: 290px;
+  font-size: 16px;
+  color: #777C86;
+  padding: 11px 10px 11px 15px;
+  margin-bottom: 10px;
+}
+
+.edit-profile__save-btn {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 36px;
+  background: #016BA0;
+  border-radius: 10px;
+  padding: 2px 20px;
+  cursor: pointer;
+  margin-top: 30px;
+}
