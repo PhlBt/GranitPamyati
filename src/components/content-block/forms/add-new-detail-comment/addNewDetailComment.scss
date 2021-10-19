@@ -1,0 +1,67 @@
+.new-comment__main-container {
+  width: 100%;
+  position: relative;
+}
+
+.new-comment__main-input {
+  width: 100%;
+  resize: none;
+  background: #FFFFFF;
+  border: 1px solid #777C86;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 16px;
+  color: #777C86;
+}
+
+.new-comment__main-input:active,
+.new-comment__main-input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
+  color: #333333;
+}
+
+.new-comment__main-actions {
+  position: absolute;
+  bottom: 17px;
+  padding: 0 17px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-comment__action-list {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-comment__action-send {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #BDBDBD;
+}
+
+.new-comment__action-send span {
+  font-size: 16px;
+  margin-right: 10px;
+  line-height: 140%;
+}
+
+.new-comment__action svg:hover path,
+.new-comment__action-send:hover path,
+.new-comment__action-send:hover {
+  color: #016BA0;
+  fill: #016BA0;
+}
+
+.new-comment__action svg:active path,
+.new-comment__action-send:active path,
+.new-comment__action-send:active {
+  color: #003C5A;
+  fill: #003C5A;
+}
