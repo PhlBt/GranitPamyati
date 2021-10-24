@@ -159,6 +159,15 @@
   background-color: #ffffff;
 }
 
+.about-author__dropdown-toggle.open {
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  border-color: #003C5A;
+  border-width: 2px;
+  color: #003C5A;
+  font-weight: 600;
+}
+
 .about-author__dropdown-menu {
   z-index: 9999;
   width: 100%;
@@ -166,54 +175,59 @@
   top: 100%;
   display: none;
   max-height: 250px;
-  margin-top: 5px;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 10px 15px;
-  box-shadow: 0px 2px 15px rgba(93, 125, 142, 0.3);
+  padding: 0 10px 16px 15px;
+  border: 2px solid #003C5A;
 }
 
 .about-author__dropdown-menu.open {
   display: block;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .about-author__dropdown-item {
   font-size: 16px;
   padding: 10px 0;
   display: block;
-  color: #777C86;
+  color: #003C5A;
   cursor: pointer;
+}
+
+.about-author__dropdown-toggle.open .about-author__dropdown-icon path {
+  fill: #003C5A;
 }
 
 .about-author__dropdown-icon {
   position: absolute;
-  right: 12px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-  @media (max-width: 577.98px) {
-    .about-author-form__input-item {
-      width: 100%;
-      max-width: 100%;
-    }
-    .about-author-form__input-item:first-child {
-      margin-bottom: 15px;
-    }
-    .about-author-form__group {
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-    }
+@media (max-width: 577.98px) {
+  .about-author-form__input-item {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-author-form__input-item:first-child {
+    margin-bottom: 15px;
+  }
+  .about-author-form__group {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 331.98px) {
+  .about-author-form__group-btn {
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
   }
 
-  @media (max-width: 331.98px) {
-    .about-author-form__group-btn {
-      -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
-    }
-
-    .about-author-form__help-text {
-      margin-left: 0;
-      margin-bottom: 20px;
-    }
+  .about-author-form__help-text {
+    margin-left: 0;
+    margin-bottom: 20px;
   }
+}
