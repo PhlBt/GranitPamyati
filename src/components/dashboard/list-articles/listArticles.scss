@@ -124,6 +124,16 @@
   border-radius: 5px;
 }
 
+.pagination-btn:hover {
+  border: 1px solid #016BA0;
+  color: #016BA0;
+}
+
+.pagination-btn:active {
+  background-color: #016BA0;
+  color: #FFFFFF;
+}
+
 .pagination__container {
   display: flex;
   justify-content: flex-end;
