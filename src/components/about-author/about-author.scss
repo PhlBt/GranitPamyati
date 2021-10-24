@@ -15,3 +15,29 @@
 .about-after-form .content__title {
   font-size: 20px;
 }
+
+@media (max-width: 720.98px) {
+  .about-after-form {
+    max-width: 330px;
+    min-width: 330px;
+  }
+}
+
+@media (max-width: 660.98px) {
+  .about-after__container {
+    flex-direction: column-reverse;
+  }
+  .about-after-form {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 330.98px) {
+  .about-after__container {
+    flex-direction: column-reverse;
+  }
+  .about-after-form {
+    max-width: 290px;
+  }
+}
