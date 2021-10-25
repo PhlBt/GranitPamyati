@@ -3,7 +3,7 @@
   position: absolute;
   top: 50px;
   left: 90px;
-  width: 410px;
+  width: 554px;
   background-color: #FFFFFF;
   z-index: 9999;
   -webkit-box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
@@ -40,8 +40,12 @@
   display: block;
 }
 
+.location-search__form__input-container {
+  width: 76%;
+}
 .location-search__modal .location-search__form {
   margin: 0 20px;
+  display: flex;
 }
 
 .location-search__city-items {
@@ -89,6 +93,7 @@
   width: 100%;
   height: 100%;
 }
+
 .footer .location-search__modal {
   top: auto;
   bottom: 92%;
@@ -157,4 +162,33 @@
 
 .location-search__submit:hover path {
   fill: #777C86;
+}
+
+.location-search__country {
+  margin-right: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 10px;
+  position: relative;
+  width: 104px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #D5DCE0;
+}
+
+.location-search__country-prefix {
+  margin-right: 5px;
+  color: #777C86;
+  font-size: 14px;
+}
+
+.location-search__country-logo {
+  border-radius: 2px;
+}
+
+.location-search__country-arrow {
+  position: absolute;
+  right: 11px;
 }

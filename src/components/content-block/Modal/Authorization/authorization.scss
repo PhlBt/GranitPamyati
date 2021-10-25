@@ -74,6 +74,13 @@
   cursor: pointer;
   padding: 2px 20px;
 }
+.authorization__btn-submit:hover {
+  background: #0082C4;
+}
+.authorization__btn-submit:active {
+  background: #003C5A;
+}
+
 
 .authorization__link-reset {
   cursor: pointer;

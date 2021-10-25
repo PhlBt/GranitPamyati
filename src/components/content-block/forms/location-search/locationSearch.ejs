@@ -7,12 +7,31 @@
         </span>
         <span class="location-search__title"><%= dataLocation.title %></span>
         <form class="location-search__form">
-            <input class="location-search__input" placeholder="Город" type="text">
-            <button class="location-search__submit" type="submit" value="">
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z" fill="#BDBDBD"></path>
+            <div class="location-search__country">
+                <span class="location-search__country-prefix">AM</span>
+                <svg class="location-search__country-logo" width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="28" height="20" rx="2" fill="white"/>
+                    <mask id="mask0_904:6467" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="20">
+                        <rect width="28" height="20" rx="2" fill="white"/>
+                    </mask>
+                    <g mask="url(#mask0_904:6467)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13.3333H28V6.66667H0V13.3333Z" fill="#1047B9"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.66667H28V0H0V6.66667Z" fill="#F01C31"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 20H28V13.3333H0V20Z" fill="#FECB2F"/>
+                    </g>
                 </svg>
-            </button>
+                <svg class="location-search__country-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0002 1.17C10.8128 0.983753 10.5594 0.879211 10.2952 0.879211C10.031 0.879211 9.77756 0.983753 9.59019 1.17L6.00019 4.71L2.46019 1.17C2.27283 0.983753 2.01938 0.879211 1.75519 0.879211C1.49101 0.879211 1.23756 0.983753 1.05019 1.17C0.956464 1.26297 0.88207 1.37357 0.831301 1.49543C0.780533 1.61729 0.754395 1.74799 0.754395 1.88C0.754395 2.01202 0.780533 2.14272 0.831301 2.26458C0.88207 2.38644 0.956464 2.49704 1.05019 2.59L5.29019 6.83C5.38316 6.92373 5.49376 6.99813 5.61562 7.04889C5.73747 7.09966 5.86818 7.1258 6.00019 7.1258C6.1322 7.1258 6.26291 7.09966 6.38477 7.04889C6.50663 6.99813 6.61723 6.92373 6.71019 6.83L11.0002 2.59C11.0939 2.49704 11.1683 2.38644 11.2191 2.26458C11.2699 2.14272 11.296 2.01202 11.296 1.88C11.296 1.74799 11.2699 1.61729 11.2191 1.49543C11.1683 1.37357 11.0939 1.26297 11.0002 1.17Z" fill="#D5DCE0"/>
+                </svg>
+            </div>
+            <div class="location-search__form__input-container">
+                <input class="location-search__input" placeholder="Город" type="text">
+                <button class="location-search__submit" type="submit" value="">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z" fill="#BDBDBD"></path>
+                    </svg>
+                </button>
+            </div>
         </form>
         <ul class="location-search__city-items">
             <% dataLocation.listCity.forEach(item => { %>
