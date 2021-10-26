@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .edit-profile-form__input {
@@ -16,15 +17,4 @@
   color: #777C86;
   padding: 11px 10px 11px 15px;
   margin-bottom: 10px;
-}
-
-.edit-profile__save-btn {
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 36px;
-  background: #016BA0;
-  border-radius: 10px;
-  padding: 2px 20px;
-  cursor: pointer;
-  margin-top: 30px;
 }

@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .profile-articles__sort-panel {
@@ -58,6 +59,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .profile-articles__item:last-child {
@@ -71,6 +73,7 @@
 }
 
 .profile-articles__state {
+  white-space: nowrap;
   margin-right: 40px;
   font-size: 12px;
   line-height: 19px;
@@ -138,6 +141,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 .create-articles__btn {
   font-size: 16px;
   line-height: 36px;
@@ -201,4 +205,23 @@
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media (max-width: 710.98px) {
+  .profile-articles__sort-panel {
+    margin-top: 20px;
+  }
+  .profile-articles__name {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 398.98px) {
+  .profile-articles__sort-panel {
+    font-size: 12px;
+  }
+  .profile-articles__sort-item:not(:last-child) {
+    margin: 0 5px;
+  }
 }
