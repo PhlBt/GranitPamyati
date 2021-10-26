@@ -30,27 +30,27 @@
 
 // Карточка с вопросами state 2
 
-.pull-card__form-question,
-.pull-card__answer .answer__list {
-  height: 100%;
-}
 .pull-card__answer .answer__list {
   max-height: 308px;
   overflow: hidden;
   margin-bottom: 15px;
 }
 .pull-card__form-question {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .pull-card__form-question .form-question__text {
   margin-bottom: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .pull-card__form-question .form-question__list {
-  height: 100%;
   margin-bottom: 20px;
   overflow: hidden;
   max-height: 182px;
