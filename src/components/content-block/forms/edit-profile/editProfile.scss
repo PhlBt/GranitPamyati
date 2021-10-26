@@ -18,3 +18,10 @@
   padding: 11px 10px 11px 15px;
   margin-bottom: 10px;
 }
+
+
+@media (max-width: 398.98px) {
+  .edit-profile-form__input {
+    min-width: auto;
+  }
+}
