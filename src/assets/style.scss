@@ -33,7 +33,7 @@
 @import "../components/detail/comments/comments";
 @import "../components/detail/comments/simple-comment/simpleComment";
 @import "../components/content-block/forms/add-new-detail-comment/addNewDetailComment";
-@import "../components/card/mini-pull-card/miniPullCard";
+@import "../components/card/mini-card/pull-card/miniPullCard";
 @import "../components/content-block/Modal/Authorization/authorization";
 
 *, *:before, *:after {
@@ -229,6 +229,24 @@ svg path {
 .content__list-item {
   list-style-type: initial;
   margin-bottom: 20px;
+}
+
+.btn {
+  background: #016BA0;
+  border-radius: 10px;
+  padding: 2px 20px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0082C4;
+}
+
+.btn:active {
+  background-color: #003C5A;
 }
 
 @media (max-width: 860.98px) {
