@@ -10,20 +10,15 @@
                                 <div class="question-option_item-container">
                                     <img class="question-option_image"
                                          src="<%= item.option %>"
-                                         alt=""
-                                    >
-                                    <span class="question-option_subText">
-                                    Вариант № <%= index + 1 %>
-                                </span>
+                                         alt="">
+                                    <span class="question-option_subText">Вариант № <%= index + 1 %></span>
                                 </div>
                             </li>
                         <% }); %>
                     </ul>
                 <% } else { %>
                     <div>
-                        <p class="question-option__text">
-                            <%= item.optionQuestion %>
-                        </p>
+                        <p class="question-option__text"><%= item.optionQuestion %></p>
                     </div>
                 <% } %>
             </div>
@@ -31,26 +26,19 @@
                 <ul class="question-answer_list">
                     <% item.list.forEach((item, index) => { %>
                         <li class="question-answer_item">
-                            <div class="question-answer_item-container">
-                                <label class="question-answer_item-label">
-                                    <input type="radio"
-                                           name="question"
-                                           class="question-answer_item-input"
-                                    >
-                                    <span class="question-answer_item-number">
-                                    <%= index + 1 %>.
-                                </span>
-                                    <%= item.answer %>
-                                </label>
-                            </div>
+                            <input type="checkbox"
+                                   name="question + <%= index %>"
+                                   id="question + <%= index %>"
+                                   class="question-answer_item-input custom-checkbox">
+                            <label for="question + <%= index %>" class="question-answer_item-label">
+                                <span class="question-answer_item-number"><%= index + 1 %>.</span>
+                                <%= item.answer %>
+                            </label>
                         </li>
                     <% }); %>
                 </ul>
             </div>
-            <button type="submit"
-                    class="question-btn"
-            >Голосовать
-            </button>
+            <button type="submit" class="btn">Голосовать</button>
         </form>
     </div>
 <% }); %>

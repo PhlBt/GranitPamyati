@@ -250,6 +250,66 @@ svg path {
   background-color: #003C5A;
 }
 
+.custom-checkbox,
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox+label,
+.custom-radio+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  position: relative;
+}
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.custom-checkbox:checked+label::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  background: #016BA0;
+  border-radius: 2px;
+  width: 10px;
+  height: 10px;
+}
+.custom-radio:checked+label::before,
+.custom-radio:checked+label::before {
+  border-color: #016BA0;
+}
+
+.custom-radio+label::before {
+  background-color: #FFFFFF;
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.custom-radio:checked+label::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  background: #016BA0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
 @media (max-width: 860.98px) {
   .content {
     padding-top: 140px;
