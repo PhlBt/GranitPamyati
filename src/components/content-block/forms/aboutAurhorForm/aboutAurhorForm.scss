@@ -136,74 +136,74 @@
   top: 10px;
 }
 
-
-// dropdown
-
-.about-author-form__dropdown {
-  width: 100%;
+// select
+.about-author-form__select {
   position: relative;
+  width: 100%;
 }
 
-.about-author__dropdown-toggle {
+.about-author-form__select-head {
+  width: 100%;
   border: 1px solid #777C86;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  background-color: #FFFFFF;
   border-radius: 10px;
-  width: 100%;
-  font-size: 16px;
-  color: #777C86;
-  padding: 13px 11px 13px 15px;
+  padding: 15px;
   cursor: pointer;
-  text-align: left;
   position: relative;
-  background-color: #ffffff;
-}
-
-.about-author__dropdown-toggle.open {
-  border-bottom: none;
-  border-radius: 10px 10px 0 0;
-  border-color: #003C5A;
-  border-width: 2px;
-  color: #003C5A;
-  font-weight: 600;
-}
-
-.about-author__dropdown-menu {
-  z-index: 99;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  display: none;
-  max-height: 250px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 0 10px 16px 15px;
-  border: 2px solid #003C5A;
-}
-
-.about-author__dropdown-menu.open {
-  display: block;
-  border-top: none;
-  border-radius: 0 0 10px 10px;
-}
-
-.about-author__dropdown-item {
+  color: #777C86;
   font-size: 16px;
-  padding: 10px 0;
-  display: block;
-  color: #003C5A;
-  cursor: pointer;
+  line-height: 100%;
 }
 
-.about-author__dropdown-toggle.open .about-author__dropdown-icon path {
+.about-author-form__select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-author-form__select-head.open .about-author-form__select-arrow path {
   fill: #003C5A;
 }
 
-.about-author__dropdown-icon {
+.about-author-form__select-head.open {
+  color: #003C5A;
+  font-weight: 500;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  border-width: 2px;
+  border-color: #003C5A;
+}
+
+.about-author-form__select-list {
+  display: none;
   position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 100;
+  border: 2px solid #003C5A;
+  border-radius: 0 0 10px 10px;
+  padding: 5px 8px 10px 13px;
+  flex-direction: column;
+}
+
+.about-author-form__select-list.active {
+  display: flex;
+  border-top: 0;
+}
+
+.about-author-form__select-item {
+  margin: 5px 0;
+  padding: 5px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.about-author-form__select-item:hover {
+  background-color: #F0F2F5;
+  border-radius: 5px;
 }
 
 @media (max-width: 577.98px) {
