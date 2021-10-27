@@ -69,3 +69,12 @@
   color: #003C5A;
   fill: #003C5A;
 }
+
+@media (max-width: 350.98px) {
+  .new-comment__top-panel .new-comment__action:not(:last-child) {
+    display: none;
+  }
+  .new-comment__action-list-top {
+    width: auto;
+  }
+}
