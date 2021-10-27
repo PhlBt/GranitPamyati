@@ -14,7 +14,6 @@
   box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
   border-radius: 10px;
   max-width: 370px;
-  min-height: 525px;
 }
 
 .mini-article-card__item:hover {
@@ -189,6 +188,10 @@
   flex: 1;
   margin-top: 16px;
   margin-right: 10px;
+}
+
+.mini-article-card__image {
+  border-radius: 10px 10px 0 0;
 }
 
 @media (max-width: 770.98px) {

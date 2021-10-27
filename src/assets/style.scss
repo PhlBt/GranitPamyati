@@ -284,7 +284,7 @@ svg path {
   width: 10px;
   height: 10px;
 }
-.custom-radio:checked+label::before,
+.custom-checkbox:checked+label::before,
 .custom-radio:checked+label::before {
   border-color: #016BA0;
 }
@@ -310,6 +310,11 @@ svg path {
   height: 10px;
 }
 
+@media (max-width: 1024.98px) {
+  .banner {
+    display: none!important;
+  }
+}
 @media (max-width: 860.98px) {
   .content {
     padding-top: 140px;
