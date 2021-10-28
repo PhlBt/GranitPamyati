@@ -164,7 +164,8 @@ svg path {
   max-width: 790px;
   overflow-x: hidden;
   overflow-y: visible;
-  padding: 0 10px;
+  padding: 10px 10px 0 10px;
+  margin-top: -10px;
 }
 
 .social-link__inst:hover:not(:active),
@@ -194,7 +195,7 @@ svg path {
 
 // content text
 .content__text a {
-  color: #016BA0;
+  color: #0077E5;
 }
 
 .content__title {

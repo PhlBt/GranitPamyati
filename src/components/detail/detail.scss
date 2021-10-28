@@ -44,6 +44,11 @@
   cursor: pointer;
 }
 
+.detail-panel__item.information,
+.detail-panel__item.information svg {
+  cursor: default;
+}
+
 .detail-panel__item:not(:last-child) {
   margin-right: 15px;
 }
@@ -58,11 +63,15 @@
 }
 
 //panel effects
-.detail-panel__item:hover path {
+.detail-panel__item:not(.detail-panel__item.information):hover .detail-panel__count{
+  color: #003C5A;
+}
+
+.detail-panel__item:not(.detail-panel__item.information):hover path {
   fill: #003C5A;
 }
 
-.detail-panel__item svg:active {
+.detail-panel__item:not(.detail-panel__item.information):active {
   -webkit-transform: scale(.9);
   -ms-transform: scale(.9);
   transform: scale(.9);

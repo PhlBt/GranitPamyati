@@ -47,6 +47,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
 .mini-article-card__item .content-category__item-link {
@@ -101,7 +102,7 @@
 }
 
 // bread crumbs effects
-.mini-article-card__item:hover .content-category__item-link:last-child {
+.content-category__item-link:hover {
   color: #003C5A;
 }
 

@@ -111,8 +111,8 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
-  color: #003C5A;
-  border: 1px solid #003C5A;
+  color: #777C86;
+  border: 1px solid #777C86;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 20px;
@@ -131,6 +131,7 @@
 }
 
 .footer .location-address__value {
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   -webkit-text-decoration-line: underline;
@@ -192,6 +193,14 @@
   color: #003C5A;
 }
 
+.footer__menu-link:hover {
+  color: #961E00;
+}
+
+.footer__menu-link:active {
+  font-weight: 500;
+}
+
 .footer__location-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,6 +212,19 @@
 
 .footer__link-all-container {
   margin-right: 35px;
+}
+
+.footer__link-all-container:hover .footer__link-all {
+  color: #FFFFFF;
+  background-color: #003C5A;
+  border-radius: 20px;
+}
+
+.footer__link-all-container:active .footer__link-all {
+  color: #003C5A;
+  border-color: #003C5A;
+  background-color: #ffffff;
+  border-radius: 20px;
 }
 
 // logo

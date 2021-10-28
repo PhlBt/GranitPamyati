@@ -8,6 +8,10 @@
   border-radius: 10px;
 }
 
+.main-article-card__item:hover {
+  box-shadow: 0 2px 10px rgb(93 125 142 / 50%);
+}
+
 // bread crumbs
 .main-article-card__item .content-category__container {
   display: -webkit-box;
