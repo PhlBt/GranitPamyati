@@ -1,17 +1,4 @@
 // slider
-const swiper = new Swiper('.swiper-container', {
-    loop: true,
-
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    navigation: {
-        nextEl: '.swiper-arrow-next',
-        prevEl: '.swiper-arrow-prev',
-    },
-});
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -28,10 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let listContainerDropdown = document.querySelectorAll("[data-dropdown-modal]");
     let listDropdownShareItems = document.querySelectorAll("[data-modal-share-item]");
     let listDropdownCategoryItems = document.querySelectorAll("[data-modal-category-item]");
+    let listDropdownEmojiItems = document.querySelectorAll("[data-modal-emoji-item]");
 
     listContainerDropdown.forEach(i => {
         let linkShare = i.querySelector("[data-modal-share]");
         let linkTriplets = i.querySelector("[data-modal-triplets]");
+        let linkEmoji = i.querySelector("[data-modal-emoji]");
 
         if (linkShare) {
             linkShare.addEventListener('click', ev => {
@@ -57,8 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
+        if (linkEmoji) {
+            linkEmoji.addEventListener('click', ev => {
+                i.querySelector("[data-modal-emoji-item]").classList.toggle("active");
+            });
+        }
+
         document.addEventListener('click', ev => {
-            if (!ev.target.closest('[data-modal-share-item]') && !ev.target.closest('[data-modal-category-item]') && !ev.target.closest("[data-modal-share]") && !ev.target.closest("[data-modal-triplets]")) {
+            if (!ev.target.closest('[data-modal-emoji]') && !ev.target.closest('[data-modal-emoji-item]') && !ev.target.closest('[data-modal-share-item]') && !ev.target.closest('[data-modal-category-item]') && !ev.target.closest("[data-modal-share]") && !ev.target.closest("[data-modal-triplets]")) {
                 listDropdownShareItems.forEach(item => {
                     item.classList.remove("active")
                 });
@@ -66,6 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 listDropdownCategoryItems.forEach(item => {
                     item.classList.remove("active")
                 });
+                listDropdownEmojiItems.forEach(item => {
+                    item.classList.remove("active")
+                });
+
             }
         });
     });
@@ -110,31 +109,134 @@ document.addEventListener('DOMContentLoaded', function () {
             ev.target.closest('[data-search-modal]').classList.remove("open");
         }
     });
+
+    //modal Authorization
+    !function (e) {
+        "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function (e) {
+            for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n;
+            return Boolean(o[n])
+        }), "function" != typeof e.closest && (e.closest = function (e) {
+            for (var t = this; t && 1 === t.nodeType;) {
+                if (t.matches(e)) return t;
+                t = t.parentNode
+            }
+            return null
+        })
+    }(window.Element.prototype);
+
+    let modalButtons = document.querySelectorAll('.js-open-modal'),
+        overlay = document.querySelector('.js-overlay-modal'),
+        closeButtons = document.querySelectorAll('.js-modal-close');
+
+    modalButtons.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let modalId = this.getAttribute('data-modal'),
+                modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+            modalElem.classList.add('active');
+            overlay.classList.add('active');
+        });
+    });
+
+    closeButtons.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            let parentModal = this.closest('.modal');
+
+            parentModal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+    });
+
+    document.body.addEventListener('keyup', function (e) {
+        let key = e.keyCode;
+
+        if (key == 27) {
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        }
+    }, false);
+
+    overlay.addEventListener('click', function () {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+    });
+
+    (function () {
+        function InitSelect(el) {
+            this.input = el.querySelector('.select__input');
+            this.head = el.querySelector('.select__head-js');
+            this.list = el.querySelector('.select__list-js');
+            this.items = el.querySelectorAll('.select__item-js');
+            this.handlers = {
+                watch: function (ev) {
+                    if (!ev.target.closest('.select-js')) {
+                        this.close();
+                    }
+                }
+            };
+
+            this.init = function () {
+                this.update();
+
+                this.head.addEventListener('click', () => {
+                    this.head.classList.contains('open') ? this.close() : this.open();
+                });
+
+                this.items.forEach((item) => {
+                    item.addEventListener('click', () => { this.click(item) });
+                });
+            };
+
+            this.click = function (item) {
+                this.input.value = item.getAttribute('data-select-id');
+                this.close();
+                this.update(item);
+            };
+
+            this.update = function (item) {
+                this.head.children[0].innerHTML = item
+                    ? item.innerHTML
+                    : this.list.querySelector(`[data-select-id="${this.input.value}"]`).innerHTML
+            };
+
+            this.open = function () {
+                this.head.classList.add('open');
+                this.list.classList.add('active');
+                this.attachListener(document, 'click', 'watch');
+            };
+
+            this.close = function () {
+                this.head.classList.remove('open');
+                this.list.classList.remove('active');
+                this.removeListener(document, 'click', 'watch');
+            };
+
+            this.getEventHandler = function (handlerName) {
+                return this.handlers['__' + handlerName] || this.handlers[handlerName];
+            };
+
+            this.attachListener = function (element, event, handlerName) {
+                element.addEventListener(event, this.registrListener(handlerName));
+            };
+
+            this.registrListener = function (handlerName) {
+                this.handlers['__' + handlerName] = this.handlers['__' + handlerName] || this.handlers[handlerName].bind(this);
+                return this.handlers['__' + handlerName];
+            };
+
+            this.removeListener = function (element, event, handlerName) {
+                element.removeEventListener(event, this.getEventHandler(handlerName));
+            };
+
+            this.init();
+        };
+
+        document.querySelectorAll('.select-js').forEach((select) => {
+            new InitSelect(select);
+        });
+    }());
 });
 
-jQuery(($) => {
-    $('.select-js').on('click', '.select__head-js', function () {
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open');
-            $(this).next().removeClass('active');
-        } else {
-            $('.select__head-js').removeClass('open');
-            $('.select__list-js').addClass('active');
-            $(this).addClass('open');
-        }
-    });
-
-    $('.select-js').on('click', '.select__item-js', function () {
-        $('.select__head-js').removeClass('open');
-        $(this).parent().removeClass('active');
-        $(this).parent().prev().text($(this).text());
-        $(this).parent().prev().prev().val($(this).text());
-    });
-
-    $(document).click(function (e) {
-        if (!$(e.target).closest('.select-js').length) {
-            $('.select__head-js').removeClass('open');
-            $('.select__list-js').removeClass('active');
-        }
-    });
-});

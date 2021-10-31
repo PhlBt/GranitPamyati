@@ -35,6 +35,7 @@
 @import "../components/content-block/forms/add-new-detail-comment/addNewDetailComment";
 @import "../components/card/mini-card/poll-card/miniPollCard";
 @import "../components/content-block/Modal/Authorization/authorization";
+@import "../components/modal/modal-emoji-menu/modal-emoji-menu";
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -62,6 +63,7 @@ img {
   -o-object-position: top;
   object-position: top;
 }
+
 body {
   font-size: 14px;
   color: #333333;
@@ -128,9 +130,11 @@ h3 {
 h4 {
   font-size: 18px;
 }
+
 svg {
   cursor: pointer;
 }
+
 svg path {
   pointer-events: none;
 }
@@ -194,7 +198,8 @@ svg path {
 }
 
 // content text
-.content__text a {
+.content__text a,
+.modal a {
   color: #0077E5;
 }
 
@@ -209,11 +214,13 @@ svg path {
 }
 
 // content text effects
-.content__text a:hover {
+.content__text a:hover,
+.modal a:hover {
   color: #005B88;
 }
 
-.content__text a:active {
+.content__text a:active,
+.modal a:active {
   color: #961E00;
 }
 
@@ -257,14 +264,16 @@ svg path {
   z-index: -1;
   opacity: 0;
 }
-.custom-checkbox+label,
-.custom-radio+label {
+
+.custom-checkbox + label,
+.custom-radio + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
   position: relative;
 }
-.custom-checkbox+label::before {
+
+.custom-checkbox + label::before {
   content: '';
   display: inline-block;
   width: 18px;
@@ -276,7 +285,8 @@ svg path {
   border-radius: 5px;
   margin-right: 10px;
 }
-.custom-checkbox:checked+label::after {
+
+.custom-checkbox:checked + label::after {
   content: '';
   position: absolute;
   left: 4px;
@@ -285,12 +295,13 @@ svg path {
   width: 10px;
   height: 10px;
 }
-.custom-checkbox:checked+label::before,
-.custom-radio:checked+label::before {
+
+.custom-checkbox:checked + label::before,
+.custom-radio:checked + label::before {
   border-color: #016BA0;
 }
 
-.custom-radio+label::before {
+.custom-radio + label::before {
   background-color: #FFFFFF;
   content: '';
   display: inline-block;
@@ -301,7 +312,7 @@ svg path {
   margin-right: 10px;
 }
 
-.custom-radio:checked+label::after {
+.custom-radio:checked + label::after {
   content: '';
   position: absolute;
   left: 4px;
@@ -313,9 +324,10 @@ svg path {
 
 @media (max-width: 1024.98px) {
   .banner {
-    display: none!important;
+    display: none !important;
   }
 }
+
 @media (max-width: 860.98px) {
   .content {
     padding-top: 140px;
@@ -344,6 +356,6 @@ svg path {
 
 @media (max-width: 450.98px) {
   .wrapper {
-    padding: 0 5px!important;
+    padding: 0 5px !important;
   }
 }

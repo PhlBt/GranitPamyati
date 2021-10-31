@@ -27,7 +27,7 @@
 }
 
 .location-search__inner {
-  padding: 25px 0 20px;
+  padding: 25px 15px 20px 0;
   position: relative;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .location-search__modal .location-search__form {
-  margin: 0 20px;
+  margin: 0 15px 0 20px;
   display: flex;
 }
 
@@ -63,18 +63,9 @@
 
 .location-search__city-items {
   margin-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
@@ -230,8 +221,6 @@
   margin: 10px 0;
   padding: 5px 5px 5px 9px;
   width: fit-content;
-  // Временно
-  pointer-events: none;
 }
 
 .location-search__country-list .location-search__country-item:hover {

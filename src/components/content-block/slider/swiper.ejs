@@ -1,21 +1,20 @@
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <% linkImage.forEach(item => { %>
-            <div class="swiper-slide"><img src="<%= item.image %>" alt=""></div>
-        <% }); %>
-    </div>
-
-    <div class="swiper-pagination"></div>
-    <div class="swipe-arrow swiper-arrow-prev">
-        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="25" cy="25" r="25" fill="#828282" fill-opacity="0.4"/>
-            <path d="M15.0712 25.1421L29.2134 39.2843V11L15.0712 25.1421Z" fill="#F0F2F5"/>
-        </svg>
-    </div>
-    <div class="swipe-arrow swiper-arrow-next">
-        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="25" cy="25" r="25" fill="#828282" fill-opacity="0.4"/>
-            <path d="M15.0712 25.1421L29.2134 39.2843V11L15.0712 25.1421Z" fill="#F0F2F5"/>
-        </svg>
-    </div>
+<div id="myCarousel" class="carousel">
+    <% linkImage.forEach(item => { %>
+            <div class="carousel__slide" data-source-title="<%=item.source%>">
+                <img data-fancybox="gallery" data-lazy-src="<%=item.image%>" alt="">
+            </div>
+    <% }); %>
 </div>
+<p data-source-targer class="help-text">Источник фото: https://kudago.com/spb/place/mednyj-vsadnik/</p>
+<script>
+    const mainCarousel = new Carousel(document.querySelector("#myCarousel"), {
+        on: {
+            selectSlide: (carousel) => {
+                var sourceText = document.querySelector("[data-source-targer]");
+                var currentSlide = carousel.pages[carousel.page].slides[0];
+
+                sourceText.textContent = sourceText.textContent = `Источник фото: ${currentSlide.$el.getAttribute('data-source-title')}`;
+            }
+        }
+    });
+</script>

@@ -1,0 +1,63 @@
+// menu modal
+.modal-emoji-menu.active {
+  display: block;
+}
+
+.modal-emoji-menu {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 0;
+  width: 232px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
+  border-radius: 10px;
+  display: none;
+  z-index: 99;
+  padding: 15px;
+}
+.modal-emoji-menu__title {
+  color: #BDBDBD;
+  font-size: 10px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.modal-emoji-menu__items::-webkit-scrollbar {
+  width: 7px;
+  background-color: #F0F2F5;
+}
+.modal-emoji-menu__items::-webkit-scrollbar-thumb {
+  background-color: #DEDEDE;
+}
+
+.modal-emoji-menu__items {
+  max-height: 287px;
+  overflow-y: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap:4px;
+}
+
+.modal-emoji-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+// menu modal effects
+.modal-emoji-menu__item:hover {
+  background: #E0E4EB;
+}
+
+@media (max-width: 400px) {
+  .modal-emoji-menu {
+    position: absolute;
+    left: 0;
+  }
+}

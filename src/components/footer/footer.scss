@@ -64,7 +64,7 @@
 }
 
 .footer__lift-content {
-  margin-top: 29px;
+  margin-top: 35px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,7 +84,8 @@
   color: #777C86;
 }
 
-.footer__link-in-shop {
+.footer__link-in-shop,
+.footer__link-logIn {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -93,17 +94,35 @@
   color: #777C86;
   background: #E0E0E0;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.footer__inner.desktop .footer__link-in-shop {
+.footer__link-logIn {
+  margin-top: 20px;
+  line-height: 12px;
+}
+
+.footer__link-logIn svg {
+  margin-right: 6px;
+}
+
+.footer__inner.desktop .footer__link-in-shop,
+.footer__inner.desktop .footer__link-logIn {
   padding: 8px 30px;
   width: 100%;
 }
 
-.footer__link-in-shop:hover {
+.footer__link-in-shop:hover,
+.footer__link-logIn:hover {
   background-color: #003C5A;
   color: #ffffff;
-  cursor: pointer;
+}
+
+.footer__link-logIn:hover path {
+  fill: #ffffff;
 }
 
 .footer__link-all {
@@ -208,6 +227,7 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .footer__link-all-container {
@@ -242,6 +262,9 @@
   white-space: nowrap;
 }
 
+.footer__left-logo {
+  margin-top: -6px;
+}
 .footer__left-logo a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,7 +288,6 @@
   display: none;
 }
 
-
 .footer__inner.mobile .footer__social-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,12 +307,8 @@
 
 .footer__inner.mobile .footer__social {
   margin-right: 30px;
-  -webkit-box-flex: 55%;
-  -ms-flex: 55%;
-  flex: 55%;
+  flex: 32%;
   min-width: 230px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -337,6 +355,7 @@
   }
   .footer__left-logo {
     margin-right: 30px;
+    margin-top: 0;
   }
   .footer__left-logo svg {
     height: 32px;
@@ -349,7 +368,7 @@
   }
   .footer__lift-content {
     position: absolute;
-    bottom: 40px;
+    bottom: 70px;
     height: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -361,6 +380,9 @@
   }
   .footer__inner-center {
     width: 100%;
+  }
+  .footer__link-logIn {
+    margin-top: 10px;
   }
 }
 
@@ -387,7 +409,8 @@
     display: block;
     margin-bottom: 30px;
   }
-  .footer__link-in-shop {
+  .footer__link-in-shop,
+  .footer__link-logIn {
     padding: 10px 20px;
     border-radius: 24px;
   }
@@ -409,10 +432,8 @@
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
-    margin-top: 30px;
-  }
-  .footer__inner.mobile .footer__link-in-shop {
-    padding: 8px 34px;
+    margin: 30px auto 0;
+    max-width: 210px;
   }
   .footer__inner.mobile .footer__services {
     display: -webkit-box;

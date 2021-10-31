@@ -17,7 +17,7 @@
   opacity: 0;
   visibility: hidden;
   width: 100%;
-  max-width: 1030px;
+  max-width: 550px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -29,7 +29,7 @@
   box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
   text-align: center;
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 10px;
   background-color: #fff;
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
@@ -37,18 +37,27 @@
 }
 
 .modal__cross {
-  width: 25px;
-  height: 25px;
   position: absolute;
-  top: 0;
-  right: -45px;
+  top: 20px;
+  right: 20px;
   fill: #E0E4EB;
   cursor: pointer;
   z-index: 20;
 }
 
+.modal__cross:hover path {
+  fill: #777C86;
+}
+
 .modal.active,
-.overlay.active{
+.overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 576.98px) {
+  .modal {
+    max-width: 500px;
+    padding: 10px;
+  }
 }

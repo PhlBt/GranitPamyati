@@ -8,25 +8,25 @@
   right: 0;
   top: 30px;
   width: 180px;
-  height: 171px;
-  overflow-y: auto;
   background: #FFFFFF;
   -webkit-box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
   box-shadow: 0 2px 15px rgba(93, 125, 142, 0.3);
   border-radius: 10px;
   display: none;
   z-index: 99;
+  padding: 10px;
 }
-.modal-category-menu::-webkit-scrollbar {
+.modal-category-menu__items::-webkit-scrollbar {
   width: 7px;
   background-color: #F0F2F5;
 }
-.modal-category-menu::-webkit-scrollbar-thumb {
+.modal-category-menu__items::-webkit-scrollbar-thumb {
   background-color: #DEDEDE;
 }
 
 .modal-category-menu__items {
-  padding: 10px;
+  overflow-y: auto;
+  max-height: 171px;
 }
 
 .modal-category-menu__item {

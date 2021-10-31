@@ -1,9 +1,5 @@
-.modal {
-  max-width: 550px;
-}
-
 .modal-authorization__container {
-  padding: 25px;
+  padding: 25px 25px 45px 25px;
 }
 
 .modal-authorization__title {
@@ -12,12 +8,17 @@
 
 .modal-authorization__text {
   color: #777C86;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .modal-authorization__list-link {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-authorization__link-item {
+  margin-top: 20px;
 }
 
 .modal-authorization__link-item:not(:last-child) {
@@ -27,7 +28,7 @@
 .authorization__form {
   max-width: 373px;
   width: 100%;
-  margin: 0 auto;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,34 +57,106 @@
   position: absolute;
   left: 17px;
 }
+
 .authorization__input-icon.password {
   left: 19px;
 }
+
 .authorization__bottom-panel {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.authorization__btn-submit {
-  background: #016BA0;
-  border-radius: 10px;
-  font-size: 16px;
-  line-height: 36px;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 2px 20px;
-}
 .authorization__btn-submit:hover {
   background: #0082C4;
 }
+
 .authorization__btn-submit:active {
   background: #003C5A;
 }
 
-
 .authorization__link-reset {
   cursor: pointer;
-  color: #777C86;
+  color: #777C86!important;
   text-decoration-line: underline;
+}
+
+.modal-authorization__item-logo-f:hover:not(:active),
+.modal-authorization__item-logo-ok:hover:not(:active),
+.modal-authorization__item-logo-t:hover:not(:active),
+.modal-authorization__item-logo-y:hover:not(:active),
+.modal-authorization__item-logo-r:hover:not(:active),
+.modal-authorization__item-logo-g:hover:not(:active),
+.modal-authorization__item-logo-vk:hover:not(:active) {
+  box-shadow: 0 2px 5px rgba(103, 129, 143, 0.5);
+  border-radius: 24px;
+}
+
+.modal-authorization__item-logo-f:hover:not(:active) rect {
+  fill: #2F63CB;
+}
+
+.modal-authorization__item-logo-ok:hover:not(:active) rect {
+  fill: #FF9900;
+}
+
+.modal-authorization__item-logo-t:hover:not(:active) rect {
+  fill: #21ABFF;
+}
+
+.modal-authorization__item-logo-y:hover:not(:active) rect {
+  fill: #FF2012;
+}
+
+.modal-authorization__item-logo-r:hover:not(:active) rect {
+  fill: #3988FF;
+}
+
+.modal-authorization__item-logo-g:hover:not(:active) rect {
+  fill: #FF5142;
+}
+
+.modal-authorization__item-logo-vk:hover:not(:active) rect {
+  fill: #4F90DB;
+}
+
+.modal-authorization__item-logo-y:active rect {
+  fill: #EB0404;
+}
+
+.modal-authorization__item-logo-t:active rect {
+  fill: #1690DB;
+}
+
+.modal-authorization__item-logo-r:active rect {
+  fill: #0056E2;
+}
+
+.modal-authorization__item-logo-g:active rect {
+  fill: #E33223;
+}
+
+.modal-authorization__item-logo-f:active rect {
+  fill: #335293;
+}
+
+.modal-authorization__item-logo-ok:active rect {
+  fill: #DB7807;
+}
+
+.modal-authorization__item-logo-vk:active rect {
+  fill: #3F6B9D;
+}
+
+@media (max-width: 576.98px) {
+  .modal-authorization__container {
+    padding: 25px 5px 45px 5px;
+  }
+}
+
+@media (max-width: 460.98px) {
+  .modal-authorization__container {
+    padding: 25px 5px 10px 5px;
+  }
 }

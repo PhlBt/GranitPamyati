@@ -1,72 +1,43 @@
-// swiper
-.swiper-pagination {
-  bottom: 25px !important;
+#myCarousel {
+  max-height: 450px;
+  margin-bottom: 10px;
 }
 
-.swiper-pagination .swiper-pagination-bullet {
+#myCarousel .carousel__slide {
+  width: 100%;
+  padding: 0;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#myCarousel .carousel__dots {
+  bottom: 30px !important;
+  top: auto;
+}
+
+#myCarousel .carousel__dots .carousel__dot {
   width: 16px;
   height: 16px;
-  opacity: 1;
-  background-color: #FFFFFF;
-  margin: 0 10px !important;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
-.swiper-pagination .swiper-pagination-bullet:hover {
-  border: 3px solid #ffffff !important;
-  background-color: #777C86 !important;
-}
-
-.swiper-pagination .swiper-pagination-bullet-active {
-  border: 3px solid #ffffff;
+#myCarousel .carousel__dots .carousel__dot.is-selected:after {
+  width: 10px;
+  height: 10px;
   background-color: #003C5A;
 }
 
-.swiper-slide {
-  height: 450px !important;
-  border-radius: 10px;
+#myCarousel .carousel__dots .carousel__dot:after {
+  background-color: transparent;
 }
 
-.swiper-slide img {
-  border-radius: 10px;
+#myCarousel .carousel__dots .carousel__dot:hover:after {
+  background-color: #777C86;
 }
 
-.modal .swiper-slide img {
-  border-radius: 0;
-}
-
-.swipe-arrow {
-  width: 50px !important;
-  height: 50px !important;
-  position: absolute;
-  top: 45%;
-  -webkit-transform: translateY(-45%);
-  -ms-transform: translateY(-45%);
-  transform: translateY(-45%);
-  z-index: 99;
-  cursor: pointer;
-  opacity: .6;
-}
-
-.swipe-arrow:hover {
-  opacity: 1;
-}
-
-.swipe-arrow:active {
-  opacity: .9;
-}
-
-.swiper-arrow-next {
-  right: 20px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.swiper-arrow-prev {
-  left: 20px;
-  -webkit-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
+#myCarousel .carousel__dots .carousel__dot:not(:last-child) {
+  margin-right: 20px;
 }
 
 .help-text {
@@ -76,26 +47,9 @@
   line-height: 120%;
   text-align: center;
   color: #777C86;
-  margin-top: 10px;
-}
-
-.swiper-container {
-  overflow: hidden;
-  position: relative;
-}
-
-.modal .swiper-pagination  {
-  bottom: 20px!important;
 }
 
 @media (max-width: 330.98px) {
-  .swiper-arrow-next {
-    right: 10px;
-  }
-
-  .swiper-arrow-prev {
-    left: 10px;
-  }
   .help-text {
     font-size: 9px;
   }
