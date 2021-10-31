@@ -12,17 +12,11 @@
 }
 
 .modal-authorization__list-link {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.modal-authorization__link-item {
-  margin-top: 20px;
-}
-
-.modal-authorization__link-item:not(:last-child) {
-  margin-right: 20px;
+  gap: 20px;
 }
 
 .authorization__form {
@@ -158,5 +152,8 @@
 @media (max-width: 460.98px) {
   .modal-authorization__container {
     padding: 25px 5px 10px 5px;
+  }
+  .modal-authorization__list-link {
+    gap: 15px;
   }
 }
