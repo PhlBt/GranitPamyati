@@ -65,3 +65,38 @@ var data = [
 ]
 %>
 <%- include('list-articles/listArticles', {data}); -%>
+
+
+<script>
+    var dashboardContainer = document.querySelector("[data-dashboard-main-card]");
+    var changePasswordCard = document.querySelector('[data-change-password-card]');
+    var EditProfileCard = document.querySelector('[data-edit-profile-card]');
+    var changePasswordBtn = dashboardContainer.querySelector('[data-change-password-btn]');
+    var EditProfileBtn = dashboardContainer.querySelector('[data-edit-profile-btn]');
+    var changePasswordSaveBtn = changePasswordCard.querySelector('[data-change-password-save-btn]');
+    var EditProfileSaveBtn = EditProfileCard.querySelector('[data-edit-profile-save-btn]');
+
+    changePasswordBtn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        changePasswordCard.style.display = "block";
+        dashboardContainer.style.display = "none";
+        EditProfileCard.style.display = "none";
+    });
+    EditProfileBtn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        changePasswordCard.style.display = "none";
+        dashboardContainer.style.display = "none";
+        EditProfileCard.style.display = "block";
+    });
+    changePasswordSaveBtn.addEventListener('click', function () {
+        changePasswordCard.style.display = "none";
+        dashboardContainer.style.display = "block";
+        EditProfileCard.style.display = "none";
+    });
+    EditProfileSaveBtn.addEventListener('click', function () {
+        changePasswordCard.style.display = "none";
+        dashboardContainer.style.display = "block";
+        EditProfileCard.style.display = "none";
+    });
+
+</script>

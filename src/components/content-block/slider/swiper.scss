@@ -10,9 +10,46 @@
   overflow: hidden;
   border-radius: 10px;
 }
+
 #myCarousel .carousel__dots {
   bottom: 30px !important;
   top: auto;
+}
+
+#myCarousel .carousel__button {
+  width: 50px;
+  height: 50px;
+  background-image: url("static/strelka-def.svg");
+  background-size: contain;
+  opacity: .7;
+  background-repeat: no-repeat;
+}
+
+#myCarousel .carousel__button:hover {
+  opacity: 1;
+}
+
+#myCarousel .carousel__button:active {
+  opacity: 1;
+  transform: scale(.9) translateY(-50%);
+}
+
+#myCarousel .carousel__button.is-next:active {
+  opacity: 1;
+  transform: scale(.9) translateY(-50%) rotate(180deg);
+}
+
+#myCarousel .carousel__button.is-next {
+  right: 20px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+#myCarousel .carousel__button.is-prev {
+  left: 20px;
+}
+
+#myCarousel .carousel__button svg {
+  display: none;
 }
 
 #myCarousel .carousel__dots .carousel__dot {
@@ -47,6 +84,37 @@
   line-height: 120%;
   text-align: center;
   color: #777C86;
+}
+
+@media (max-width: 768.98px) {
+  #myCarousel .carousel__slide {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576.98px) {
+  #myCarousel .carousel__slide {
+    height: 333px;
+  }
+}
+
+@media (max-width: 420.98px) {
+  #myCarousel .carousel__slide {
+    height: 290px;
+  }
+  #myCarousel .carousel__button {
+    width: 32px;
+    height: 32px;
+  }
+  #myCarousel .carousel__button.is-next {
+    right: 10px;
+  }
+  #myCarousel .carousel__button.is-prev {
+    left: 10px;
+  }
+  #myCarousel .carousel__dots {
+    display: none;
+  }
 }
 
 @media (max-width: 330.98px) {

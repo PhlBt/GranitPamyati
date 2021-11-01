@@ -1,15 +1,11 @@
 .author-card__logo {
-  margin-right: 30px;
+  margin-right: 5%;
 }
 
 .author-card__logo {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.author-card__logo-img {
-
 }
 
 .author-card__logo__switch-btn {
@@ -66,14 +62,15 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 546.98px) {
-  .author-card.edit {
+@media (max-width: 536.98px) {
+  .author-card__change-password-container,
+  .author-card__edit-profile-container {
     margin-top: 30px;
   }
 }
 
-@media (max-width: 398.98px) {
-  .author-card:not(.author-card.edit) {
+@media (max-width: 381.98px) {
+  .author-card__profile-container {
     margin-top: 30px;
   }
 }
