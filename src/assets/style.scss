@@ -199,15 +199,20 @@ svg path {
 
 // content text
 .content__text a,
-.modal a {
+.modal a,
+.detail-content__container p a{
   color: #0077E5;
 }
 
-.content__title {
+.content__title,
+.detail-content__container h2,
+.detail-content__container h1,
+.detail-content__container h3 {
   margin-bottom: 16px;
 }
 
-.content__text {
+.content__text,
+.detail-content__container p {
   font-size: 16px;
   line-height: 160%;
   color: #333333;
@@ -215,17 +220,22 @@ svg path {
 
 // content text effects
 .content__text a:hover,
-.modal a:hover {
+.modal a:hover,
+.detail-content__container p a:hover {
   color: #005B88;
 }
 
 .content__text a:active,
-.modal a:active {
+.modal a:active,
+.detail-content__container p a:active{
   color: #961E00;
 }
 
 // list
-.content-list__container .content__title {
+.content-list__container .content__title,
+.content-list__container .detail-content__container h2,
+.content-list__container .detail-content__container h1,
+.content-list__container .detail-content__container h3 {
   margin-bottom: 15px;
 }
 

@@ -26,7 +26,7 @@ const tasks = [
     path: './gulp-tasks/sass',
     options: {
       src: 'src/assets/style.scss',
-      dest: 'build/css/',
+      dest: 'build/',
       dev: isDev,
       build: isBuild
     }
