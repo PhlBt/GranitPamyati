@@ -12,7 +12,7 @@
 }
 
 .location-search__modal.open {
-  display: flex;
+  display: block;
 }
 
 .location-search__close-modal-logo {
@@ -66,8 +66,12 @@
   height: 340px;
 }
 
-.location-search__modal .location-search__city-items {
+.side-menu-mobile .location-search__city-items {
   height: 100%;
+}
+
+.side-menu-mobile .location-search__modal.open {
+  display: flex;
 }
 
 .location-search__city-items::-webkit-scrollbar {
