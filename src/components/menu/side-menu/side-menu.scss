@@ -163,7 +163,7 @@
   right: 0;
   top: 0;
   width: 0;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   height: 100%;
   z-index: 99999;
   -webkit-transition: all .5s ease 0s;
@@ -200,7 +200,8 @@
 
 .side-menu-mobile__header {
   position: relative;
-  padding: 22px 39px 30px 30px;
+  padding: 22px 30px 30px 30px;
+  background-color: #FFFFFF;
 }
 
 .side-menu-mobile__header .side-menu__inner-main {
