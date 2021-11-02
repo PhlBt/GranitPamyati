@@ -22,6 +22,10 @@
   z-index: 99999;
 }
 
+.location-search__close-modal-logo svg.mobile {
+  display: none;
+}
+
 .location-search__close-modal-logo:hover path {
   fill: #777C86;
 }
@@ -29,6 +33,8 @@
 .location-search__inner {
   padding: 25px 15px 20px 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .location-search__title {
@@ -49,27 +55,23 @@
   display: flex;
 }
 
-.side-menu-mobile__header .location-search__country-head {
-  padding: 7px 9px 7px 7px;
-}
-
-.side-menu-mobile__header .location-search__country-arrow {
-  right: 8px;
-}
-
-.side-menu-mobile__header .location-search__country-list .location-search__country-item {
-  padding: 5px 5px 5px 4px;
-}
-
 .location-search__city-items {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   height: 340px;
+}
+
+.side-menu-mobile .location-search__city-items {
+  height: 100%;
+}
+
+.side-menu-mobile .location-search__modal.open {
+  display: flex;
 }
 
 .location-search__city-items::-webkit-scrollbar {
@@ -104,7 +106,55 @@
   right: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+}
+
+.side-menu-mobile__header .location-search__modal .location-search__close-modal-logo svg.mobile {
+  display: block;
+}
+
+.side-menu-mobile__header .location-search__modal .location-search__close-modal-logo:hover svg.mobile rect {
+  stroke: #003C5A;
+}
+
+.side-menu-mobile__header .location-search__modal .location-search__close-modal-logo:hover svg.mobile path {
+  fill: #003C5A;
+}
+
+.side-menu-mobile__header .location-search__modal .location-search__close-modal-logo svg.desktop {
+  display: none;
+}
+
+.side-menu-mobile__header .location-search__modal .location-search__close-modal-logo {
+  right: 30px;
+  top: 22px;
+}
+
+.side-menu-mobile__header .location-search__title {
+  display: none;
+}
+
+.side-menu-mobile__header .location-search__form {
+  flex-wrap: wrap;
+}
+
+.side-menu-mobile__header .location-search__form__input-container {
+  width: 100%;
+}
+
+.side-menu-mobile__header .location-search__country {
+  margin-bottom: 35px;
+}
+
+.side-menu-mobile__header .location-search__submit {
+  bottom: 4px;
+  top: auto;
+  right: 4px;
+}
+
+.side-menu-mobile__header .location-search__city-item {
+  font-size: 18px;
+  line-height: 50px;
 }
 
 .footer .location-search__modal {
@@ -256,15 +306,4 @@
 
 .location-search__country-head.open .location-search__country-arrow {
   transform: translateY(-50%) rotate(180deg);
-}
-
-@media (max-width: 380px) {
-  .side-menu-mobile__header .location-search__country-prefix {
-    margin-right: 2px;
-    font-size: 12px;
-  }
-
-  .side-menu-mobile__header .location-search__country-logo {
-    transform: scale(.8);
-  }
 }
