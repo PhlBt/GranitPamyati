@@ -12,7 +12,7 @@
 }
 
 .location-search__modal.open {
-  display: block;
+  display: flex;
 }
 
 .location-search__close-modal-logo {
@@ -33,6 +33,8 @@
 .location-search__inner {
   padding: 25px 15px 20px 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .location-search__title {
@@ -57,11 +59,15 @@
   margin-top: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   height: 340px;
+}
+
+.location-search__modal .location-search__city-items {
+  height: 100%;
 }
 
 .location-search__city-items::-webkit-scrollbar {
@@ -96,7 +102,7 @@
   right: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .side-menu-mobile__header .location-search__modal .location-search__close-modal-logo svg.mobile {
